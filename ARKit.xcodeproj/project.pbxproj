@@ -9,13 +9,29 @@
 /* Begin PBXBuildFile section */
 		2D1470BF17374DCC00845408 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D1470BE17374DCC00845408 /* Foundation.framework */; };
 		2D1470C417374DCC00845408 /* ARKit.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2D1470C317374DCC00845408 /* ARKit.h */; };
-		2D1470C617374DCC00845408 /* ARKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D1470C517374DCC00845408 /* ARKit.m */; };
 		2D1470CE17374DCD00845408 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D1470CD17374DCD00845408 /* SenTestingKit.framework */; };
 		2D1470D017374DCD00845408 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D1470CF17374DCD00845408 /* UIKit.framework */; };
 		2D1470D117374DCD00845408 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D1470BE17374DCC00845408 /* Foundation.framework */; };
 		2D1470D417374DCD00845408 /* libARKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D1470BB17374DCC00845408 /* libARKit.a */; };
 		2D1470DA17374DCD00845408 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2D1470D817374DCD00845408 /* InfoPlist.strings */; };
 		2D1470DD17374DCD00845408 /* ARKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D1470DC17374DCD00845408 /* ARKitTests.m */; };
+		2D1470EF17374E6400845408 /* NSString+Color.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D1470E817374E6400845408 /* NSString+Color.m */; };
+		2D1470F917374F2D00845408 /* ARTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D1470F717374F2D00845408 /* ARTheme.m */; };
+		2D1470FB17374F8100845408 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D1470FA17374F8100845408 /* UIKit.framework */; };
+		2D1470FC17374FD600845408 /* NSString+Color.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2D1470E717374E6400845408 /* NSString+Color.h */; };
+		2D14710117374FD600845408 /* ARTheme.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2D1470F617374F2D00845408 /* ARTheme.h */; };
+		2D14710C173750A600845408 /* ARLayoutEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D14710B173750A600845408 /* ARLayoutEngine.m */; };
+		2D14710D173750D000845408 /* ARLayoutEngine.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2D14710A173750A600845408 /* ARLayoutEngine.h */; };
+		2D1471101737513700845408 /* ARAppUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D14710F1737513700845408 /* ARAppUtil.m */; };
+		2D1471111737515300845408 /* ARAppUtil.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2D14710E1737513700845408 /* ARAppUtil.h */; };
+		2D14711A1737536100845408 /* ARBenchMark.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D1471191737536100845408 /* ARBenchMark.m */; };
+		2D14711B1737538900845408 /* ARBenchMark.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2D1471181737536100845408 /* ARBenchMark.h */; };
+		2D14712A173758D200845408 /* UILabel+ARTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D147125173758D200845408 /* UILabel+ARTheme.m */; };
+		2D14712B173758D200845408 /* UISegmentedControl+ARTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D147127173758D200845408 /* UISegmentedControl+ARTheme.m */; };
+		2D14712C173758D200845408 /* UIView+ARTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D147129173758D200845408 /* UIView+ARTheme.m */; };
+		2D14712F1737594500845408 /* ARStrings.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D14712E1737594500845408 /* ARStrings.m */; };
+		2D14713217375E6100845408 /* UIView+ARLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D14713117375E6100845408 /* UIView+ARLayout.m */; };
+		2D14713317375E8700845408 /* UIView+ARLayout.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2D14713017375E6100845408 /* UIView+ARLayout.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +51,12 @@
 			dstPath = "include/${PRODUCT_NAME}";
 			dstSubfolderSpec = 16;
 			files = (
+				2D14713317375E8700845408 /* UIView+ARLayout.h in CopyFiles */,
+				2D14711B1737538900845408 /* ARBenchMark.h in CopyFiles */,
+				2D1471111737515300845408 /* ARAppUtil.h in CopyFiles */,
+				2D14710D173750D000845408 /* ARLayoutEngine.h in CopyFiles */,
+				2D1470FC17374FD600845408 /* NSString+Color.h in CopyFiles */,
+				2D14710117374FD600845408 /* ARTheme.h in CopyFiles */,
 				2D1470C417374DCC00845408 /* ARKit.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -46,7 +68,6 @@
 		2D1470BE17374DCC00845408 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		2D1470C217374DCC00845408 /* ARKit-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ARKit-Prefix.pch"; sourceTree = "<group>"; };
 		2D1470C317374DCC00845408 /* ARKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ARKit.h; sourceTree = "<group>"; };
-		2D1470C517374DCC00845408 /* ARKit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ARKit.m; sourceTree = "<group>"; };
 		2D1470CC17374DCD00845408 /* ARKitTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ARKitTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D1470CD17374DCD00845408 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		2D1470CF17374DCD00845408 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
@@ -54,6 +75,27 @@
 		2D1470D917374DCD00845408 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2D1470DB17374DCD00845408 /* ARKitTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ARKitTests.h; sourceTree = "<group>"; };
 		2D1470DC17374DCD00845408 /* ARKitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ARKitTests.m; sourceTree = "<group>"; };
+		2D1470E717374E6400845408 /* NSString+Color.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Color.h"; sourceTree = "<group>"; };
+		2D1470E817374E6400845408 /* NSString+Color.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Color.m"; sourceTree = "<group>"; };
+		2D1470F617374F2D00845408 /* ARTheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARTheme.h; sourceTree = "<group>"; };
+		2D1470F717374F2D00845408 /* ARTheme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARTheme.m; sourceTree = "<group>"; };
+		2D1470FA17374F8100845408 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		2D14710A173750A600845408 /* ARLayoutEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARLayoutEngine.h; sourceTree = "<group>"; };
+		2D14710B173750A600845408 /* ARLayoutEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARLayoutEngine.m; sourceTree = "<group>"; };
+		2D14710E1737513700845408 /* ARAppUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARAppUtil.h; sourceTree = "<group>"; };
+		2D14710F1737513700845408 /* ARAppUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARAppUtil.m; sourceTree = "<group>"; };
+		2D1471181737536100845408 /* ARBenchMark.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARBenchMark.h; sourceTree = "<group>"; };
+		2D1471191737536100845408 /* ARBenchMark.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARBenchMark.m; sourceTree = "<group>"; };
+		2D147124173758D200845408 /* UILabel+ARTheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+ARTheme.h"; sourceTree = "<group>"; };
+		2D147125173758D200845408 /* UILabel+ARTheme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+ARTheme.m"; sourceTree = "<group>"; };
+		2D147126173758D200845408 /* UISegmentedControl+ARTheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UISegmentedControl+ARTheme.h"; sourceTree = "<group>"; };
+		2D147127173758D200845408 /* UISegmentedControl+ARTheme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UISegmentedControl+ARTheme.m"; sourceTree = "<group>"; };
+		2D147128173758D200845408 /* UIView+ARTheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ARTheme.h"; sourceTree = "<group>"; };
+		2D147129173758D200845408 /* UIView+ARTheme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ARTheme.m"; sourceTree = "<group>"; };
+		2D14712D1737594500845408 /* ARStrings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARStrings.h; sourceTree = "<group>"; };
+		2D14712E1737594500845408 /* ARStrings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARStrings.m; sourceTree = "<group>"; };
+		2D14713017375E6100845408 /* UIView+ARLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ARLayout.h"; sourceTree = "<group>"; };
+		2D14713117375E6100845408 /* UIView+ARLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ARLayout.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +103,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D1470FB17374F8100845408 /* UIKit.framework in Frameworks */,
 				2D1470BF17374DCC00845408 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -101,6 +144,7 @@
 		2D1470BD17374DCC00845408 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2D1470FA17374F8100845408 /* UIKit.framework */,
 				2D1470BE17374DCC00845408 /* Foundation.framework */,
 				2D1470CD17374DCD00845408 /* SenTestingKit.framework */,
 				2D1470CF17374DCD00845408 /* UIKit.framework */,
@@ -112,7 +156,10 @@
 			isa = PBXGroup;
 			children = (
 				2D1470C317374DCC00845408 /* ARKit.h */,
-				2D1470C517374DCC00845408 /* ARKit.m */,
+				2D1471061737504B00845408 /* ARUtils */,
+				2D1471021737501A00845408 /* ARLayout */,
+				2D1470F317374EE600845408 /* ARTheme */,
+				2D1470E617374E0900845408 /* Categories */,
 				2D1470C117374DCC00845408 /* Supporting Files */,
 			);
 			path = ARKit;
@@ -143,6 +190,54 @@
 				2D1470D817374DCD00845408 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2D1470E617374E0900845408 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				2D1470E717374E6400845408 /* NSString+Color.h */,
+				2D1470E817374E6400845408 /* NSString+Color.m */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		2D1470F317374EE600845408 /* ARTheme */ = {
+			isa = PBXGroup;
+			children = (
+				2D1470F617374F2D00845408 /* ARTheme.h */,
+				2D1470F717374F2D00845408 /* ARTheme.m */,
+				2D14712D1737594500845408 /* ARStrings.h */,
+				2D14712E1737594500845408 /* ARStrings.m */,
+				2D147124173758D200845408 /* UILabel+ARTheme.h */,
+				2D147125173758D200845408 /* UILabel+ARTheme.m */,
+				2D147126173758D200845408 /* UISegmentedControl+ARTheme.h */,
+				2D147127173758D200845408 /* UISegmentedControl+ARTheme.m */,
+				2D147128173758D200845408 /* UIView+ARTheme.h */,
+				2D147129173758D200845408 /* UIView+ARTheme.m */,
+			);
+			path = ARTheme;
+			sourceTree = "<group>";
+		};
+		2D1471021737501A00845408 /* ARLayout */ = {
+			isa = PBXGroup;
+			children = (
+				2D14710A173750A600845408 /* ARLayoutEngine.h */,
+				2D14710B173750A600845408 /* ARLayoutEngine.m */,
+				2D14713017375E6100845408 /* UIView+ARLayout.h */,
+				2D14713117375E6100845408 /* UIView+ARLayout.m */,
+			);
+			path = ARLayout;
+			sourceTree = "<group>";
+		};
+		2D1471061737504B00845408 /* ARUtils */ = {
+			isa = PBXGroup;
+			children = (
+				2D1471181737536100845408 /* ARBenchMark.h */,
+				2D1471191737536100845408 /* ARBenchMark.m */,
+				2D14710E1737513700845408 /* ARAppUtil.h */,
+				2D14710F1737513700845408 /* ARAppUtil.m */,
+			);
+			path = ARUtils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -243,7 +338,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2D1470C617374DCC00845408 /* ARKit.m in Sources */,
+				2D1470EF17374E6400845408 /* NSString+Color.m in Sources */,
+				2D1470F917374F2D00845408 /* ARTheme.m in Sources */,
+				2D14710C173750A600845408 /* ARLayoutEngine.m in Sources */,
+				2D1471101737513700845408 /* ARAppUtil.m in Sources */,
+				2D14711A1737536100845408 /* ARBenchMark.m in Sources */,
+				2D14712A173758D200845408 /* UILabel+ARTheme.m in Sources */,
+				2D14712B173758D200845408 /* UISegmentedControl+ARTheme.m in Sources */,
+				2D14712C173758D200845408 /* UIView+ARTheme.m in Sources */,
+				2D14712F1737594500845408 /* ARStrings.m in Sources */,
+				2D14713217375E6100845408 /* UIView+ARLayout.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -403,6 +507,7 @@
 				2D1470E217374DCD00845408 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2D1470E317374DCD00845408 /* Build configuration list for PBXNativeTarget "ARKitTests" */ = {
 			isa = XCConfigurationList;
@@ -411,6 +516,7 @@
 				2D1470E517374DCD00845408 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
