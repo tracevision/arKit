@@ -1,0 +1,14 @@
+This is version 0.1 alpha of ARKit. 
+
+---
+
+###Why ARKit?
+
+* styles seperate from code
+* simple layout scheme
+
+These are just a few of most interesting features in ARKit.
+
+---
+
+
