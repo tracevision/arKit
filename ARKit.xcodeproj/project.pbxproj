@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D02E0FC17395A54007996A7 /* ARStrings.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2D14712D1737594500845408 /* ARStrings.h */; };
+		2D02E0FD17395A6F007996A7 /* UILabel+ARTheme.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2D147124173758D200845408 /* UILabel+ARTheme.h */; };
+		2D02E0FE17395A6F007996A7 /* UISegmentedControl+ARTheme.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2D147126173758D200845408 /* UISegmentedControl+ARTheme.h */; };
+		2D02E0FF17395A6F007996A7 /* UIView+ARTheme.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2D147128173758D200845408 /* UIView+ARTheme.h */; };
+		2D02E10717396280007996A7 /* UIImageView+ARTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D02E10617396280007996A7 /* UIImageView+ARTheme.m */; };
+		2D02E10817396351007996A7 /* UIImageView+ARTheme.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2D02E10517396280007996A7 /* UIImageView+ARTheme.h */; };
+		2D02E10B17396473007996A7 /* UIButton+ARTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D02E10A17396473007996A7 /* UIButton+ARTheme.m */; };
+		2D02E10C17396557007996A7 /* UIButton+ARTheme.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2D02E10917396473007996A7 /* UIButton+ARTheme.h */; };
+		2D02E10E17396A75007996A7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D02E10D17396A75007996A7 /* CoreGraphics.framework */; };
+		2D02E11017396A8C007996A7 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D02E10F17396A8C007996A7 /* QuartzCore.framework */; };
 		2D1470BF17374DCC00845408 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D1470BE17374DCC00845408 /* Foundation.framework */; };
 		2D1470C417374DCC00845408 /* ARKit.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2D1470C317374DCC00845408 /* ARKit.h */; };
 		2D1470CE17374DCD00845408 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D1470CD17374DCD00845408 /* SenTestingKit.framework */; };
@@ -51,6 +61,12 @@
 			dstPath = "include/${PRODUCT_NAME}";
 			dstSubfolderSpec = 16;
 			files = (
+				2D02E10C17396557007996A7 /* UIButton+ARTheme.h in CopyFiles */,
+				2D02E10817396351007996A7 /* UIImageView+ARTheme.h in CopyFiles */,
+				2D02E0FD17395A6F007996A7 /* UILabel+ARTheme.h in CopyFiles */,
+				2D02E0FE17395A6F007996A7 /* UISegmentedControl+ARTheme.h in CopyFiles */,
+				2D02E0FF17395A6F007996A7 /* UIView+ARTheme.h in CopyFiles */,
+				2D02E0FC17395A54007996A7 /* ARStrings.h in CopyFiles */,
 				2D14713317375E8700845408 /* UIView+ARLayout.h in CopyFiles */,
 				2D14711B1737538900845408 /* ARBenchMark.h in CopyFiles */,
 				2D1471111737515300845408 /* ARAppUtil.h in CopyFiles */,
@@ -64,6 +80,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2D02E10517396280007996A7 /* UIImageView+ARTheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+ARTheme.h"; sourceTree = "<group>"; };
+		2D02E10617396280007996A7 /* UIImageView+ARTheme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+ARTheme.m"; sourceTree = "<group>"; };
+		2D02E10917396473007996A7 /* UIButton+ARTheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+ARTheme.h"; sourceTree = "<group>"; };
+		2D02E10A17396473007996A7 /* UIButton+ARTheme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+ARTheme.m"; sourceTree = "<group>"; };
+		2D02E10D17396A75007996A7 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		2D02E10F17396A8C007996A7 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		2D1470BB17374DCC00845408 /* libARKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libARKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D1470BE17374DCC00845408 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		2D1470C217374DCC00845408 /* ARKit-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ARKit-Prefix.pch"; sourceTree = "<group>"; };
@@ -103,6 +125,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D02E11017396A8C007996A7 /* QuartzCore.framework in Frameworks */,
+				2D02E10E17396A75007996A7 /* CoreGraphics.framework in Frameworks */,
 				2D1470FB17374F8100845408 /* UIKit.framework in Frameworks */,
 				2D1470BF17374DCC00845408 /* Foundation.framework in Frameworks */,
 			);
@@ -144,6 +168,8 @@
 		2D1470BD17374DCC00845408 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2D02E10F17396A8C007996A7 /* QuartzCore.framework */,
+				2D02E10D17396A75007996A7 /* CoreGraphics.framework */,
 				2D1470FA17374F8100845408 /* UIKit.framework */,
 				2D1470BE17374DCC00845408 /* Foundation.framework */,
 				2D1470CD17374DCD00845408 /* SenTestingKit.framework */,
@@ -214,6 +240,10 @@
 				2D147127173758D200845408 /* UISegmentedControl+ARTheme.m */,
 				2D147128173758D200845408 /* UIView+ARTheme.h */,
 				2D147129173758D200845408 /* UIView+ARTheme.m */,
+				2D02E10517396280007996A7 /* UIImageView+ARTheme.h */,
+				2D02E10617396280007996A7 /* UIImageView+ARTheme.m */,
+				2D02E10917396473007996A7 /* UIButton+ARTheme.h */,
+				2D02E10A17396473007996A7 /* UIButton+ARTheme.m */,
 			);
 			path = ARTheme;
 			sourceTree = "<group>";
@@ -348,6 +378,8 @@
 				2D14712C173758D200845408 /* UIView+ARTheme.m in Sources */,
 				2D14712F1737594500845408 /* ARStrings.m in Sources */,
 				2D14713217375E6100845408 /* UIView+ARLayout.m in Sources */,
+				2D02E10717396280007996A7 /* UIImageView+ARTheme.m in Sources */,
+				2D02E10B17396473007996A7 /* UIButton+ARTheme.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

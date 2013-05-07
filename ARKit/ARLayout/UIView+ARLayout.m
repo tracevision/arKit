@@ -44,7 +44,7 @@
 
 - (void)addSubview:(UIView *)view below:(UIView *)relativeView offsetTop:(double)offsetTop offsetLeft:(double)offsetLeft
 {
-    view.x = relativeView.x;
+    view.x = relativeView.x + offsetLeft;
     view.y = relativeView.y + relativeView.height + offsetTop;
     [self addSubview:view];
 }
@@ -56,9 +56,9 @@
     [self addSubview:view];
 }
 
-- (void)addSubview:(UIView *)view leftOf:(UIView *)relativeView offsetTop:(double)offsetTop offsetLeft:(double)offsetLeft
+- (void)addSubview:(UIView *)view leftOf:(UIView *)relativeView offsetTop:(double)offsetTop offsetRight:(double)offsetRight
 {
-    view.x = relativeView.x - view.width - offsetLeft;
+    view.x = relativeView.x - view.width - offsetRight;
     view.y = relativeView.y + offsetTop;
     [self addSubview:view];
 }

@@ -1,0 +1,6 @@
+{
+    "red": { "color": "#ac000" },
+    "green": "#00ac00",
+    "blue": "#000062",
+    "pattern": { "image": "pattern_bg" }
+}

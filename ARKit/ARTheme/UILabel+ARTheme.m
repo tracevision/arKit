@@ -46,6 +46,10 @@
             {
                 self.adjustsFontSizeToFitWidth = [[style objectForKey:key] boolValue];
             }
+            else if ([key isEqualToString:@"numberOfLines"])
+            {
+                self.numberOfLines = [[style objectForKey:key] integerValue];
+            }
         }
     }
     else

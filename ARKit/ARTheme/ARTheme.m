@@ -8,6 +8,7 @@
 
 #import "ARKit.h"
 #import <objc/runtime.h>
+#import <QuartzCore/QuartzCore.h>
 
 @implementation ARTheme
 
@@ -194,7 +195,8 @@
     }
     else if ([style isKindOfClass:[NSString class]])
     {
-        image = [ARTheme imageWithColor:[style toColor]];
+        NSString *imageStyle = [self.images objectForKey:style];
+        image = [UIImage imageNamed:imageStyle];
     }
     
     return image;

@@ -21,7 +21,7 @@
 - (void)addSubview:(UIView *)view above:(UIView *)relativeView offsetTop:(double)offsetTop offsetLeft:(double)offsetLeft;
 - (void)addSubview:(UIView *)view below:(UIView *)relativeView offsetTop:(double)offsetTop offsetLeft:(double)offsetLeft;
 - (void)addSubview:(UIView *)view rightOf:(UIView *)relativeView offsetTop:(double)offsetTop offsetLeft:(double)offsetLeft;
-- (void)addSubview:(UIView *)view leftOf:(UIView *)relativeView offsetTop:(double)offsetTop offsetLeft:(double)offsetLeft;
+- (void)addSubview:(UIView *)view leftOf:(UIView *)relativeView offsetTop:(double)offsetTop offsetRight:(double)offsetRight;
 - (void)debugFrame;
 
 @end
