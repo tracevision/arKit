@@ -17,6 +17,15 @@
 		2D02E10C17396557007996A7 /* UIButton+ARTheme.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2D02E10917396473007996A7 /* UIButton+ARTheme.h */; };
 		2D02E10E17396A75007996A7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D02E10D17396A75007996A7 /* CoreGraphics.framework */; };
 		2D02E11017396A8C007996A7 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D02E10F17396A8C007996A7 /* QuartzCore.framework */; };
+		2D02E119173974F3007996A7 /* colors.json in Resources */ = {isa = PBXBuildFile; fileRef = 2D02E114173974F3007996A7 /* colors.json */; };
+		2D02E11A173974F3007996A7 /* fonts.json in Resources */ = {isa = PBXBuildFile; fileRef = 2D02E115173974F3007996A7 /* fonts.json */; };
+		2D02E11B173974F3007996A7 /* images.json in Resources */ = {isa = PBXBuildFile; fileRef = 2D02E116173974F3007996A7 /* images.json */; };
+		2D02E11C173974F3007996A7 /* strings.json in Resources */ = {isa = PBXBuildFile; fileRef = 2D02E117173974F3007996A7 /* strings.json */; };
+		2D02E11D173974F3007996A7 /* styles.json in Resources */ = {isa = PBXBuildFile; fileRef = 2D02E118173974F3007996A7 /* styles.json */; };
+		2D02E1201739756F007996A7 /* ARLayoutTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D02E11F1739756F007996A7 /* ARLayoutTests.m */; };
+		2D02E121173976F7007996A7 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D02E10F17396A8C007996A7 /* QuartzCore.framework */; };
+		2D02E122173976F7007996A7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D02E10D17396A75007996A7 /* CoreGraphics.framework */; };
+		2D02E123173976F7007996A7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D1470FA17374F8100845408 /* UIKit.framework */; };
 		2D1470BF17374DCC00845408 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D1470BE17374DCC00845408 /* Foundation.framework */; };
 		2D1470C417374DCC00845408 /* ARKit.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2D1470C317374DCC00845408 /* ARKit.h */; };
 		2D1470CE17374DCD00845408 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D1470CD17374DCD00845408 /* SenTestingKit.framework */; };
@@ -86,6 +95,13 @@
 		2D02E10A17396473007996A7 /* UIButton+ARTheme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+ARTheme.m"; sourceTree = "<group>"; };
 		2D02E10D17396A75007996A7 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		2D02E10F17396A8C007996A7 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		2D02E114173974F3007996A7 /* colors.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = colors.json; sourceTree = "<group>"; };
+		2D02E115173974F3007996A7 /* fonts.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = fonts.json; sourceTree = "<group>"; };
+		2D02E116173974F3007996A7 /* images.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = images.json; sourceTree = "<group>"; };
+		2D02E117173974F3007996A7 /* strings.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = strings.json; sourceTree = "<group>"; };
+		2D02E118173974F3007996A7 /* styles.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = styles.json; sourceTree = "<group>"; };
+		2D02E11E1739756F007996A7 /* ARLayoutTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARLayoutTests.h; sourceTree = "<group>"; };
+		2D02E11F1739756F007996A7 /* ARLayoutTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARLayoutTests.m; sourceTree = "<group>"; };
 		2D1470BB17374DCC00845408 /* libARKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libARKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D1470BE17374DCC00845408 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		2D1470C217374DCC00845408 /* ARKit-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ARKit-Prefix.pch"; sourceTree = "<group>"; };
@@ -140,12 +156,27 @@
 				2D1470D017374DCD00845408 /* UIKit.framework in Frameworks */,
 				2D1470D117374DCD00845408 /* Foundation.framework in Frameworks */,
 				2D1470D417374DCD00845408 /* libARKit.a in Frameworks */,
+				2D02E121173976F7007996A7 /* QuartzCore.framework in Frameworks */,
+				2D02E122173976F7007996A7 /* CoreGraphics.framework in Frameworks */,
+				2D02E123173976F7007996A7 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2D02E113173974F3007996A7 /* TestTheme */ = {
+			isa = PBXGroup;
+			children = (
+				2D02E114173974F3007996A7 /* colors.json */,
+				2D02E115173974F3007996A7 /* fonts.json */,
+				2D02E116173974F3007996A7 /* images.json */,
+				2D02E117173974F3007996A7 /* strings.json */,
+				2D02E118173974F3007996A7 /* styles.json */,
+			);
+			path = TestTheme;
+			sourceTree = "<group>";
+		};
 		2D1470B217374DCC00845408 = {
 			isa = PBXGroup;
 			children = (
@@ -202,8 +233,11 @@
 		2D1470D517374DCD00845408 /* ARKitTests */ = {
 			isa = PBXGroup;
 			children = (
+				2D02E113173974F3007996A7 /* TestTheme */,
 				2D1470DB17374DCD00845408 /* ARKitTests.h */,
 				2D1470DC17374DCD00845408 /* ARKitTests.m */,
+				2D02E11E1739756F007996A7 /* ARLayoutTests.h */,
+				2D02E11F1739756F007996A7 /* ARLayoutTests.m */,
 				2D1470D617374DCD00845408 /* Supporting Files */,
 			);
 			path = ARKitTests;
@@ -342,6 +376,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				2D1470DA17374DCD00845408 /* InfoPlist.strings in Resources */,
+				2D02E119173974F3007996A7 /* colors.json in Resources */,
+				2D02E11A173974F3007996A7 /* fonts.json in Resources */,
+				2D02E11B173974F3007996A7 /* images.json in Resources */,
+				2D02E11C173974F3007996A7 /* strings.json in Resources */,
+				2D02E11D173974F3007996A7 /* styles.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -388,6 +427,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2D1470DD17374DCD00845408 /* ARKitTests.m in Sources */,
+				2D02E1201739756F007996A7 /* ARLayoutTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -500,6 +540,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ARKit/ARKit-Prefix.pch";
 				INFOPLIST_FILE = "ARKitTests/ARKitTests-Info.plist";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = octest;
 			};
@@ -515,6 +556,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ARKit/ARKit-Prefix.pch";
 				INFOPLIST_FILE = "ARKitTests/ARKitTests-Info.plist";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = octest;
 			};

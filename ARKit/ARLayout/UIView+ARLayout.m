@@ -22,6 +22,7 @@
     return self;
 }
 
+
 - (id)initWithWithWidth:(CGFloat)w height:(CGFloat)h
 {
     self = [self initWithFrame:CGRectMake(0, 0, w, h)];
@@ -35,10 +36,10 @@
 
 #pragma mark - Layout Helpers
 
-- (void)addSubview:(UIView *)view above:(UIView *)relativeView offsetTop:(double)offsetTop offsetLeft:(double)offsetLeft
+- (void)addSubview:(UIView *)view above:(UIView *)relativeView offsetBottom:(double)offsetBottom offsetLeft:(double)offsetLeft
 {
-    view.x = relativeView.x;
-    view.y = relativeView.y - view.height - offsetTop;
+    view.x = relativeView.x + offsetLeft;
+    view.y = relativeView.y - view.height - offsetBottom;
     [self addSubview:view];
 }
 

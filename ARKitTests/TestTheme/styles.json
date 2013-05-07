@@ -1,0 +1,38 @@
+{    
+    "view_style": {
+      "backgroundColor": "#ccc"  
+    },
+    
+    "label_style": {
+        "textAlignment": "center",
+        "font": "title_font",
+        "textColor": "#666",
+        "numberOfLines": 99
+    },
+    
+    "image_view_style": {
+        "image": "default_user_pic",
+        "clipsToBounds": true,
+        "layer": {
+            "borderColor": "#ac0000",
+            "borderWidth": 1,
+            "cornerRadius": 6
+        }
+    },
+    
+    "button_style": {
+        "backgroundImage": { "color": "#333", "radius": 8 },
+        "backgroundImageSelected": { "color": "#111", "radius": 8 },
+        "titleColor": "#fff",
+        "titleColorHighlighted": "#f00",
+        "layer": {
+            "borderColor": "#fff",
+            "borderWidth": 3,
+            "shadowColor": "#000",
+            "shadowOpacity": 0.8,
+            "shadowRadius": 2,
+            "shadowOffset": { "width": 2, "height": 2 },
+            "cornerRadius": 6
+        }
+    }
+}
