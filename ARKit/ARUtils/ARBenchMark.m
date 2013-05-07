@@ -36,6 +36,16 @@
     [[ARBenchMark sharedBenchMark] stop:name];
 }
 
++ (void)warn:(NSString *)name maxSeconds:(double)maxSeconds
+{
+    [[ARBenchMark sharedBenchMark] warn:name maxSeconds:maxSeconds];
+}
+
++ (void)warn:(NSString *)name
+{
+    [[ARBenchMark sharedBenchMark] warn:name maxSeconds:0.5];
+}
+
 - (id)init
 {
     self = [super init];
@@ -64,4 +74,17 @@
     double total = CFAbsoluteTimeGetCurrent() - [start doubleValue];
     NSLog(@"bench: %@ %f", name, total);
 }
+
+- (void)warn:(NSString *)name maxSeconds:(double)maxSeconds
+{
+    NSNumber *start = [self.marks objectForKey:name];
+    double total = CFAbsoluteTimeGetCurrent() - [start doubleValue];
+    if (total > maxSeconds)
+    {
+        NSLog(@"\n\n\t**** WARNING ****");
+        NSLog(@"\tbench: %@ %f", name, total);
+        NSLog(@"\t****\n\n");
+    }
+}
+
 @end
