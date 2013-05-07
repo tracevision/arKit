@@ -19,6 +19,8 @@
 #import "UIView+ARTheme.h"
 #import "UILabel+ARTheme.h"
 #import "UISegmentedControl+ARTheme.h"
+#import "UIButton+ARTheme.h"
+#import "UIImageView+ARTheme.h"
 
 // ARLayout
 #import "ARLayoutEngine.h"

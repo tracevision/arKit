@@ -7,24 +7,21 @@
 //
 
 #import "ARStrings.h"
+#import "ARTheme.h"
 
 @implementation ARStrings
 
-+ (NSString *)localizedString:(NSString *)key
-{
-    NSString *value = [[NSBundle mainBundle] localizedStringForKey:key value:key table:nil];
-    if ([value isEqualToString:key])
-    {
-        NSBundle *defaultBundle = [NSBundle bundleWithPath:[[NSBundle mainBundle] pathForResource:@"en" ofType:@"lproj" ]];
-        value = [defaultBundle localizedStringForKey:key value:nil table:nil];
-        NSLog(@"******************* No Translation found for key %@", key);
-    }
-    return value;
-}
-
 + (NSString *)localized:(NSString *)key
 {
-    return [self localizedString:key];
+    // TODO: find a good way to localize these
+    ARTheme *theme = [ARTheme sharedTheme];
+    NSString *val = [theme.strings objectForKey:key];
+    if (val == nil)
+    {
+        val = key;
+        NSLog(@"\n\n ***** WARNING: ARString string not found for key \"%@\" *****\n\n", key);
+    }
+    return val;
 }
 
 @end

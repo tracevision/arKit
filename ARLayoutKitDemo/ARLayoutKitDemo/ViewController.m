@@ -26,7 +26,7 @@
     [titleLabel applyStyle:@"page_background"];
     [titleLabel applyStyle:@"title_label"];
     titleLabel.y = 0;
-    titleLabel.text = @"A Title Label";
+    titleLabel.text = [ARStrings localized:@"title"];
     titleLabel.textAlignment = NSTextAlignmentCenter;
     [self.view addSubview:titleLabel];
     
@@ -40,7 +40,7 @@
     
     UILabel *descriptionLabel = [[UILabel alloc] initWithWithWidth:145 height:110];
     [descriptionLabel applyStyle:@"description_label"];
-    descriptionLabel.text = @"In ante dolor, molestie at semper nec, venenatis in tellus. Morbi accumsan elementum enim a elementum. Integer malesuada lacinia laoreet. In ultricies tortor id mauris dapibus feugiat. Cras varius molestie ullamcorper. Aliquam porta mattis accumsan. Duis laoreet lectus at leo pharetra pulvinar.";
+    descriptionLabel.text = [ARStrings localized:@"description"];
     [self.view addSubview:descriptionLabel below:aView offsetTop:10 offsetLeft:0];
     
     UIView *bView = [[UIView alloc] initWithWithWidth:145 height:44];
@@ -48,7 +48,7 @@
     [self.view addSubview:bView below:descriptionLabel offsetTop:10 offsetLeft:0];
     
     UIButton *button = [[UIButton alloc] initWithWithWidth:125 height:44];
-    [button setTitle:@"Test Button" forState:UIControlStateNormal];
+    [button setTitle:[ARStrings localized:@"button"] forState:UIControlStateNormal];
     [button applyStyle:@"button_style"];
     [self.view addSubview:button leftOf:bView offsetTop:0 offsetRight:20];
 }
