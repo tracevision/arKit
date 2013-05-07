@@ -16,7 +16,7 @@
 
 - (void)testInitWithWidthHeight
 {
-    UIView *v = [[UIView alloc] initWithWithWidth:50 height:100];
+    UIView *v = [[UIView alloc] initWithWidth:50 height:100];
     
     double expectedX = 0;
     double expectedY = 0;
@@ -33,16 +33,16 @@
 
 - (void)testAddSubviewAbove
 {
-    UIView *v = [[UIView alloc] initWithWithWidth:320 height:320];
+    UIView *v = [[UIView alloc] initWithWidth:320 height:320];
     v.x = 100;
     v.y = 100;
     
-    UIView *sv1 = [[UIView alloc] initWithWithWidth:10 height:10];
+    UIView *sv1 = [[UIView alloc] initWithWidth:10 height:10];
     sv1.x = 50;
     sv1.y = 50;
     [v addSubview:sv1];
     
-    UIView *sv2 = [[UIView alloc] initWithWithWidth:10 height:10];
+    UIView *sv2 = [[UIView alloc] initWithWidth:10 height:10];
     [v addSubview:sv2 above:sv1 offsetBottom:3 offsetLeft:5];
     
     double expectedX = 55;
@@ -53,16 +53,16 @@
 
 - (void)testAddSubviewBelow
 {
-    UIView *v = [[UIView alloc] initWithWithWidth:320 height:320];
+    UIView *v = [[UIView alloc] initWithWidth:320 height:320];
     v.x = 100;
     v.y = 100;
     
-    UIView *sv1 = [[UIView alloc] initWithWithWidth:10 height:10];
+    UIView *sv1 = [[UIView alloc] initWithWidth:10 height:10];
     sv1.x = 50;
     sv1.y = 50;
     [v addSubview:sv1];
     
-    UIView *sv2 = [[UIView alloc] initWithWithWidth:10 height:10];
+    UIView *sv2 = [[UIView alloc] initWithWidth:10 height:10];
     [v addSubview:sv2 below:sv1 offsetTop:5 offsetLeft:3];
     
     double expectedX = 53;
@@ -73,16 +73,16 @@
 
 - (void)testAddSubviewRight
 {
-    UIView *v = [[UIView alloc] initWithWithWidth:320 height:320];
+    UIView *v = [[UIView alloc] initWithWidth:320 height:320];
     v.x = 100;
     v.y = 100;
     
-    UIView *sv1 = [[UIView alloc] initWithWithWidth:10 height:10];
+    UIView *sv1 = [[UIView alloc] initWithWidth:10 height:10];
     sv1.x = 50;
     sv1.y = 50;
     [v addSubview:sv1];
     
-    UIView *sv2 = [[UIView alloc] initWithWithWidth:10 height:10];
+    UIView *sv2 = [[UIView alloc] initWithWidth:10 height:10];
     [v addSubview:sv2 rightOf:sv1 offsetTop:5 offsetLeft:3];
     
     double expectedX = 63;
@@ -93,16 +93,16 @@
 
 - (void)testAddSubviewLeft
 {
-    UIView *v = [[UIView alloc] initWithWithWidth:320 height:320];
+    UIView *v = [[UIView alloc] initWithWidth:320 height:320];
     v.x = 100;
     v.y = 100;
     
-    UIView *sv1 = [[UIView alloc] initWithWithWidth:10 height:10];
+    UIView *sv1 = [[UIView alloc] initWithWidth:10 height:10];
     sv1.x = 50;
     sv1.y = 50;
     [v addSubview:sv1];
     
-    UIView *sv2 = [[UIView alloc] initWithWithWidth:10 height:10];
+    UIView *sv2 = [[UIView alloc] initWithWidth:10 height:10];
     [v addSubview:sv2 leftOf:sv1 offsetTop:3 offsetRight:5];
     
     double expectedX = 35;

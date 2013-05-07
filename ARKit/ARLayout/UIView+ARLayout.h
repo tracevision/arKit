@@ -16,7 +16,7 @@
 @property (readwrite) double height;
 
 - (id)initWithWithX:(CGFloat)xp y:(CGFloat)yp w:(CGFloat)w h:(CGFloat)h __attribute__((deprecated));
-- (id)initWithWithWidth:(CGFloat)w height:(CGFloat)h;
+- (id)initWithWidth:(CGFloat)w height:(CGFloat)h;
 
 - (void)addSubview:(UIView *)view above:(UIView *)relativeView offsetBottom:(double)offsetBottom offsetLeft:(double)offsetLeft;
 - (void)addSubview:(UIView *)view below:(UIView *)relativeView offsetTop:(double)offsetTop offsetLeft:(double)offsetLeft;

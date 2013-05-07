@@ -23,7 +23,7 @@
 }
 
 
-- (id)initWithWithWidth:(CGFloat)w height:(CGFloat)h
+- (id)initWithWidth:(CGFloat)w height:(CGFloat)h
 {
     self = [self initWithFrame:CGRectMake(0, 0, w, h)];
     if (self)
