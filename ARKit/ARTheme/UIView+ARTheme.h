@@ -6,7 +6,7 @@
 //  Copyright (c) 2013 AlpineReplay. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "ARKit.h"
 
 @interface UIView (ARTheme)
 

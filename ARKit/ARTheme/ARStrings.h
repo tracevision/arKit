@@ -6,7 +6,7 @@
 //  Copyright (c) 2013 AlpineReplay. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import "ARKit.h"
 
 @interface ARStrings : NSObject
 

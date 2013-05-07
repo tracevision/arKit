@@ -6,7 +6,7 @@
 //  Copyright (c) 2013 AlpineReplay. All rights reserved.
 //
 
-#import "ARTheme.h"
+#import "ARKit.h"
 #import <objc/runtime.h>
 
 @implementation ARTheme

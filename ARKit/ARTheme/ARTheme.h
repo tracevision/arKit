@@ -6,10 +6,7 @@
 //  Copyright (c) 2013 AlpineReplay. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-#import "UIView+ARTheme.h"
-#import "UILabel+ARTheme.h"
-#import "UISegmentedControl+ARTheme.h"
+#import "ARKit.h"
 
 @interface ARTheme : NSObject
 
