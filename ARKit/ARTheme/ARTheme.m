@@ -233,16 +233,34 @@
     return keyboardType;
 }
 
-- (UIImage *)imageFromStyle:(NSString *)style
+- (UIImage *)imageFromStyle:(NSObject *)style
 {
     UIImage *image;
     
     if ([style isKindOfClass:[NSDictionary class]])
     {
         NSDictionary *s = (NSDictionary *)style;
-        UIColor *color = [self colorFromStyle:[s objectForKey:@"color"]];
-        double radius = [[s objectForKey:@"radius"] doubleValue];
-        image = [ARTheme imageWithColor:color cornerRadius:radius];
+        NSString *c = [s objectForKey:@"color"];
+        NSString *i = [s objectForKey:@"image"];
+        if (c != nil)
+        {
+            UIColor *color = [self colorFromStyle:c];
+            double radius = [[s objectForKey:@"radius"] doubleValue];
+            image = [ARTheme imageWithColor:color cornerRadius:radius];
+        }
+        else if (i != nil)
+        {
+            image = [UIImage imageNamed:i];
+            NSDictionary *insets = [s objectForKey:@"insets"];
+            if (insets != nil)
+            {
+                NSNumber *top = [insets objectForKey:@"top"];
+                NSNumber *bottom = [insets objectForKey:@"bottom"];
+                NSNumber *left = [insets objectForKey:@"left"];
+                NSNumber *right = [insets objectForKey:@"right"];
+                image = [image resizableImageWithCapInsets:UIEdgeInsetsMake([top doubleValue], [left doubleValue], [bottom doubleValue], [right doubleValue])];
+            }
+        }
     }
     else if ([style isKindOfClass:[NSString class]])
     {

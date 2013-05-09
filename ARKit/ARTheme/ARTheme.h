@@ -31,7 +31,7 @@
 - (UIKeyboardType)keyboardTypeFromStyle:(NSString *)style;
 
 #pragma mark - Images
-- (UIImage *)imageFromStyle:(NSString *)style;
+- (UIImage *)imageFromStyle:(NSObject *)style;
 + (UIImage *)imageWithColor:(UIColor *)color;
 + (UIImage *)imageWithColor:(UIColor *)color cornerRadius:(CGFloat)radius;
 

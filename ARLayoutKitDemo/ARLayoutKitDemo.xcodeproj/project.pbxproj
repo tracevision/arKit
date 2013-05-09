@@ -26,6 +26,8 @@
 		2D02E10217395FBC007996A7 /* pattern_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D02E10117395FBC007996A7 /* pattern_bg.png */; };
 		2D02E1041739609A007996A7 /* avatar.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D02E1031739609A007996A7 /* avatar.png */; };
 		2D02E11217396B02007996A7 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D02E11117396B01007996A7 /* QuartzCore.framework */; };
+		2D76100B173C65AB00BD881D /* orange_button_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D761009173C65AB00BD881D /* orange_button_bg.png */; };
+		2D76100C173C65AB00BD881D /* orange_button_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D76100A173C65AB00BD881D /* orange_button_bg@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +55,8 @@
 		2D02E10117395FBC007996A7 /* pattern_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pattern_bg.png; sourceTree = "<group>"; };
 		2D02E1031739609A007996A7 /* avatar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = avatar.png; sourceTree = "<group>"; };
 		2D02E11117396B01007996A7 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		2D761009173C65AB00BD881D /* orange_button_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = orange_button_bg.png; sourceTree = "<group>"; };
+		2D76100A173C65AB00BD881D /* orange_button_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "orange_button_bg@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +147,8 @@
 		2D02E10017395F38007996A7 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				2D761009173C65AB00BD881D /* orange_button_bg.png */,
+				2D76100A173C65AB00BD881D /* orange_button_bg@2x.png */,
 				2D02E1031739609A007996A7 /* avatar.png */,
 				2D02E10117395FBC007996A7 /* pattern_bg.png */,
 			);
@@ -211,6 +217,8 @@
 				2D02E0FB17395931007996A7 /* styles.json in Resources */,
 				2D02E10217395FBC007996A7 /* pattern_bg.png in Resources */,
 				2D02E1041739609A007996A7 /* avatar.png in Resources */,
+				2D76100B173C65AB00BD881D /* orange_button_bg.png in Resources */,
+				2D76100C173C65AB00BD881D /* orange_button_bg@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -351,6 +359,7 @@
 				2D02E0E817395862007996A7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -52,10 +52,15 @@
     [button applyStyle:@"button_style"];
     [self.view addSubview:button leftOf:bView offsetTop:0 offsetRight:20];
     
+    UIButton *button2 = [[UIButton alloc] initWithWidth:125 height:34];
+    [button2 setTitle:[ARStrings localized:@"button"] forState:UIControlStateNormal];
+    [button2 applyStyle:@"button_with_image_insets"];
+    [self.view addSubview:button2 below:button offsetTop:10 offsetLeft:0];
+    
     UITextField *textField = [[UITextField alloc] initWithWidth:125 height:44];
     // textField.text = @"Sample text";
     [textField applyStyle:@"text_field_style"];
-    [self.view addSubview:textField below:button offsetTop:64 offsetLeft:0];
+    [self.view addSubview:textField below:button2 offsetTop:64 offsetLeft:0];
 }
 
 

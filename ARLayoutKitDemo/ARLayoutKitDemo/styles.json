@@ -57,5 +57,10 @@
         "textAlignment": "center",
         "textColor": "#333",
         "keyboardType": "default",
+    },
+    
+    "button_with_image_insets": {
+        "backgroundImage": { "image": "orange_button_bg", "insets": { "top": 5, "bottom": 5, "left": 5, "right": 5 } },
+        "backgroundImageHighlighted": { "image": "orange_button_bg", "insets": { "top": 5, "bottom": 5, "left": 5, "right": 5 } },
     }
 }
