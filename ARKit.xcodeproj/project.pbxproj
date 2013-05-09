@@ -51,6 +51,7 @@
 		2D14712F1737594500845408 /* ARStrings.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D14712E1737594500845408 /* ARStrings.m */; };
 		2D14713217375E6100845408 /* UIView+ARLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D14713117375E6100845408 /* UIView+ARLayout.m */; };
 		2D14713317375E8700845408 /* UIView+ARLayout.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2D14713017375E6100845408 /* UIView+ARLayout.h */; };
+		8735C5FA173B6C4800527B14 /* UITextField+ARTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = 8735C5F9173B6C4400527B14 /* UITextField+ARTheme.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -134,6 +135,8 @@
 		2D14712E1737594500845408 /* ARStrings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARStrings.m; sourceTree = "<group>"; };
 		2D14713017375E6100845408 /* UIView+ARLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ARLayout.h"; sourceTree = "<group>"; };
 		2D14713117375E6100845408 /* UIView+ARLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ARLayout.m"; sourceTree = "<group>"; };
+		8735C5F8173B6C4300527B14 /* UITextField+ARTheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+ARTheme.h"; sourceTree = "<group>"; };
+		8735C5F9173B6C4400527B14 /* UITextField+ARTheme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+ARTheme.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -278,6 +281,8 @@
 				2D02E10617396280007996A7 /* UIImageView+ARTheme.m */,
 				2D02E10917396473007996A7 /* UIButton+ARTheme.h */,
 				2D02E10A17396473007996A7 /* UIButton+ARTheme.m */,
+				8735C5F8173B6C4300527B14 /* UITextField+ARTheme.h */,
+				8735C5F9173B6C4400527B14 /* UITextField+ARTheme.m */,
 			);
 			path = ARTheme;
 			sourceTree = "<group>";
@@ -419,6 +424,7 @@
 				2D14713217375E6100845408 /* UIView+ARLayout.m in Sources */,
 				2D02E10717396280007996A7 /* UIImageView+ARTheme.m in Sources */,
 				2D02E10B17396473007996A7 /* UIButton+ARTheme.m in Sources */,
+				8735C5FA173B6C4800527B14 /* UITextField+ARTheme.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

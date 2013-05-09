@@ -48,5 +48,14 @@
             "shadowOffset": { "width": 2, "height": 2 },
             "cornerRadius": 6
         }
+    },
+    
+    
+    "text_field_style": {
+        "placeholder": "placeholder",
+        "font": "title_font",
+        "textAlignment": "center",
+        "textColor": "#333",
+        "keyboardType": "default",
     }
 }

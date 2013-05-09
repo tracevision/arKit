@@ -182,6 +182,57 @@
     return alignment;
 }
 
+- (UIKeyboardType)keyboardTypeFromStyle:(NSString *)style
+{
+    UIKeyboardType keyboardType = UIKeyboardTypeDefault;
+    
+    if ([style isEqualToString:@"default"])
+    {
+        keyboardType = UIKeyboardTypeDefault;
+    }
+    else if ([style isEqualToString:@"alphabet"])
+    {
+        keyboardType = UIKeyboardTypeAlphabet;
+    }
+    else if ([style isEqualToString:@"ascii"])
+    {
+        keyboardType = UIKeyboardTypeASCIICapable;
+    }
+    else if ([style isEqualToString:@"decimal"])
+    {
+        keyboardType = UIKeyboardTypeDecimalPad;
+    }
+    else if ([style isEqualToString:@"email"])
+    {
+        keyboardType = UIKeyboardTypeEmailAddress;
+    }
+    else if ([style isEqualToString:@"name_phone"])
+    {
+        keyboardType = UIKeyboardTypeNamePhonePad;
+    }
+    else if ([style isEqualToString:@"number"])
+    {
+        keyboardType = UIKeyboardTypeNumberPad;
+    }
+    else if ([style isEqualToString:@"number_punctuation"])
+    {
+        keyboardType = UIKeyboardTypeNumbersAndPunctuation;
+    }
+    else if ([style isEqualToString:@"phone"])
+    {
+        keyboardType = UIKeyboardTypePhonePad;
+    }
+    else if ([style isEqualToString:@"twitter"])
+    {
+        keyboardType = UIKeyboardTypeTwitter;
+    }
+    else if ([style isEqualToString:@"url"])
+    {
+        keyboardType = UIKeyboardTypeURL;
+    }
+    return keyboardType;
+}
+
 - (UIImage *)imageFromStyle:(NSString *)style
 {
     UIImage *image;
@@ -201,7 +252,6 @@
     
     return image;
 }
-
 
 #pragma mark - Images
 

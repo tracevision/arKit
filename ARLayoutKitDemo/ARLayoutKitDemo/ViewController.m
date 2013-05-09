@@ -51,6 +51,11 @@
     [button setTitle:[ARStrings localized:@"button"] forState:UIControlStateNormal];
     [button applyStyle:@"button_style"];
     [self.view addSubview:button leftOf:bView offsetTop:0 offsetRight:20];
+    
+    UITextField *textField = [[UITextField alloc] initWithWidth:125 height:44];
+    // textField.text = @"Sample text";
+    [textField applyStyle:@"text_field_style"];
+    [self.view addSubview:textField below:button offsetTop:64 offsetLeft:0];
 }
 
 
