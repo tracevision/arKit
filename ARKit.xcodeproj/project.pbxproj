@@ -51,6 +51,7 @@
 		2D14712F1737594500845408 /* ARStrings.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D14712E1737594500845408 /* ARStrings.m */; };
 		2D14713217375E6100845408 /* UIView+ARLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D14713117375E6100845408 /* UIView+ARLayout.m */; };
 		2D14713317375E8700845408 /* UIView+ARLayout.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2D14713017375E6100845408 /* UIView+ARLayout.h */; };
+		2D31F78A173BE95A00059E01 /* UITextField+ARTheme.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8735C5F8173B6C4300527B14 /* UITextField+ARTheme.h */; };
 		8735C5FA173B6C4800527B14 /* UITextField+ARTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = 8735C5F9173B6C4400527B14 /* UITextField+ARTheme.m */; };
 /* End PBXBuildFile section */
 
@@ -71,6 +72,7 @@
 			dstPath = "include/${PRODUCT_NAME}";
 			dstSubfolderSpec = 16;
 			files = (
+				2D31F78A173BE95A00059E01 /* UITextField+ARTheme.h in CopyFiles */,
 				2D02E10C17396557007996A7 /* UIButton+ARTheme.h in CopyFiles */,
 				2D02E10817396351007996A7 /* UIImageView+ARTheme.h in CopyFiles */,
 				2D02E0FD17395A6F007996A7 /* UILabel+ARTheme.h in CopyFiles */,

@@ -21,6 +21,7 @@
 #import "UISegmentedControl+ARTheme.h"
 #import "UIButton+ARTheme.h"
 #import "UIImageView+ARTheme.h"
+#import "UITextField+ARTheme.h"
 
 // ARLayout
 #import "ARLayoutEngine.h"
