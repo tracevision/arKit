@@ -28,6 +28,11 @@
                 UIColor *color = [theme colorFromStyle:[style objectForKey:key]];
                 self.textColor = color;
             }
+            else if ([key isEqualToString:@"textColorHighlighted"])
+            {
+                UIColor *color = [theme colorFromStyle:[style objectForKey:key]];
+                [self setHighlightedTextColor:color];
+            }
             else if ([key isEqualToString:@"font"])
             {
                 UIFont *font = [theme fontFromStyle:[style objectForKey:key]];
