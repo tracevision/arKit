@@ -50,6 +50,17 @@
             {
                 self.numberOfLines = [[style objectForKey:key] integerValue];
             }
+            else if ([key isEqualToString:@"shadowOffset"])
+            {
+                NSDictionary *val = [style objectForKey:key];
+                double w = [[val objectForKey:@"width"] doubleValue];
+                double h = [[val objectForKey:@"height"] doubleValue];
+                [self setShadowOffset:CGSizeMake(w, h)];
+            }
+            else if ([key isEqualToString:@"shadowColor"]) {
+                UIColor *color = [theme colorFromStyle:[style objectForKey:key]];
+                [self setShadowColor:color];
+            }
         }
     }
     else

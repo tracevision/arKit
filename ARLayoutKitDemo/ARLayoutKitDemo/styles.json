@@ -6,7 +6,9 @@
     "title_label": {
         "textAlignment": "center",
         "font": "title_font",
-        "textColor": "#666"
+        "textColor": "#666",
+        "shadowColor": "#eb743b",
+        "shadowOffset": { "width": 1, "height": 1 }
     },
     
     "description_label": {
@@ -42,7 +44,7 @@
         "layer": {
             "borderColor": "#fff",
             "borderWidth": 3,
-            "shadowColor": "#000",
+            "shadowColor": "#eb743b",
             "shadowOpacity": 0.8,
             "shadowRadius": 2,
             "shadowOffset": { "width": 2, "height": 2 },
