@@ -52,6 +52,15 @@
                 UIColor *color = [theme colorFromStyle:[style objectForKey:key]];
                 [self setTitleColor:color forState:UIControlStateHighlighted];
             }
+            else if ([key isEqualToString:@"titleEdgeInsets"])
+            {
+                NSDictionary *insets = [style objectForKey:key];
+                NSNumber *top = [insets objectForKey:@"top"];
+                NSNumber *bottom = [insets objectForKey:@"bottom"];
+                NSNumber *left = [insets objectForKey:@"left"];
+                NSNumber *right = [insets objectForKey:@"right"];
+                self.titleEdgeInsets = UIEdgeInsetsMake([top doubleValue], [left doubleValue], [bottom doubleValue], [right doubleValue]);
+            }
         }
     }
     else
