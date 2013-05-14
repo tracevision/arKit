@@ -272,15 +272,19 @@
         NSDictionary *s = (NSDictionary *)style;
         NSString *c = [s objectForKey:@"color"];
         NSString *i = [s objectForKey:@"image"];
-        if (c != nil)
+        if (c != nil && i == nil)
         {
             UIColor *color = [self colorFromStyle:c];
             double radius = [[s objectForKey:@"radius"] doubleValue];
             image = [ARTheme imageWithColor:color cornerRadius:radius];
         }
-        else if (i != nil)
+        else if (i != nil && c == nil)
         {
             image = [UIImage imageNamed:i];
+            if (image == nil) {
+                image = [UIImage imageNamed:[self.images objectForKey:i]];
+            }
+            
             NSDictionary *insets = [s objectForKey:@"insets"];
             if (insets != nil)
             {
@@ -289,7 +293,11 @@
                 NSNumber *left = [insets objectForKey:@"left"];
                 NSNumber *right = [insets objectForKey:@"right"];
                 image = [image resizableImageWithCapInsets:UIEdgeInsetsMake([top doubleValue], [left doubleValue], [bottom doubleValue], [right doubleValue])];
+            } else {
+                NSLog(@"WARNING[imageFromStyle in ARTheme]: image not found");
             }
+        } else {
+            NSLog(@"WARNING[imageFromStyle in ARTheme]: image.json sheet has issues");
         }
     }
     else if ([style isKindOfClass:[NSString class]])

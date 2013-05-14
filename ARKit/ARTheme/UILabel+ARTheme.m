@@ -28,6 +28,11 @@
                 UIColor *color = [theme colorFromStyle:[style objectForKey:key]];
                 self.textColor = color;
             }
+            else if ([key isEqualToString:@"textColorHighlighted"])
+            {
+                UIColor *color = [theme colorFromStyle:[style objectForKey:key]];
+                [self setHighlightedTextColor:color];
+            }
             else if ([key isEqualToString:@"font"])
             {
                 UIFont *font = [theme fontFromStyle:[style objectForKey:key]];
@@ -49,6 +54,17 @@
             else if ([key isEqualToString:@"numberOfLines"])
             {
                 self.numberOfLines = [[style objectForKey:key] integerValue];
+            }
+            else if ([key isEqualToString:@"shadowOffset"])
+            {
+                NSDictionary *val = [style objectForKey:key];
+                double w = [[val objectForKey:@"width"] doubleValue];
+                double h = [[val objectForKey:@"height"] doubleValue];
+                [self setShadowOffset:CGSizeMake(w, h)];
+            }
+            else if ([key isEqualToString:@"shadowColor"]) {
+                UIColor *color = [theme colorFromStyle:[style objectForKey:key]];
+                [self setShadowColor:color];
             }
         }
     }
