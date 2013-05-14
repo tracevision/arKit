@@ -98,6 +98,9 @@
         else if (imageName != nil)
         {
             color = [UIColor colorWithPatternImage:[UIImage imageNamed:imageName]];
+            if (color == nil) {
+                color = [UIColor colorWithPatternImage:[self.colors objectForKey:imageName]];
+            }
         }
     }
     
