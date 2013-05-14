@@ -296,8 +296,6 @@
                 NSNumber *left = [insets objectForKey:@"left"];
                 NSNumber *right = [insets objectForKey:@"right"];
                 image = [image resizableImageWithCapInsets:UIEdgeInsetsMake([top doubleValue], [left doubleValue], [bottom doubleValue], [right doubleValue])];
-            } else {
-                NSLog(@"WARNING[imageFromStyle in ARTheme]: image not found");
             }
         } else {
             NSLog(@"WARNING[imageFromStyle in ARTheme]: image.json sheet has issues");
