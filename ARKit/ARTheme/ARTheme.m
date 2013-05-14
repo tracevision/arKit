@@ -29,20 +29,50 @@
 
 + (void)setupWithThemePath:(NSString *)path
 {
-    NSString *stylesPath = [path stringByAppendingPathComponent:@"styles.json"];
-    NSDictionary *styles = [NSJSONSerialization JSONObjectWithData:[NSData dataWithContentsOfFile:stylesPath] options:NSJSONReadingAllowFragments error:nil];
+    NSMutableDictionary *styles = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary *colors = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary *fonts = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary *images = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary *strings = [[NSMutableDictionary alloc] init];
     
-    NSString *colorsPath = [path stringByAppendingPathComponent:@"colors.json"];
-    NSDictionary *colors = [NSJSONSerialization JSONObjectWithData:[NSData dataWithContentsOfFile:colorsPath] options:NSJSONReadingAllowFragments error:nil];
-    
-    NSString *fontsPath = [path stringByAppendingPathComponent:@"fonts.json"];
-    NSDictionary *fonts = [NSJSONSerialization JSONObjectWithData:[NSData dataWithContentsOfFile:fontsPath] options:NSJSONReadingAllowFragments error:nil];
-    
-    NSString *imagesPath = [path stringByAppendingPathComponent:@"images.json"];
-    NSDictionary *images = [NSJSONSerialization JSONObjectWithData:[NSData dataWithContentsOfFile:imagesPath] options:NSJSONReadingAllowFragments error:nil];
-    
-    NSString *stringsPath = [path stringByAppendingPathComponent:@"strings.json"];
-    NSDictionary *strings = [NSJSONSerialization JSONObjectWithData:[NSData dataWithContentsOfFile:stringsPath] options:NSJSONReadingAllowFragments error:nil];
+    NSFileManager *fm = [NSFileManager defaultManager];
+    NSArray *dirContents = [fm contentsOfDirectoryAtPath:path error:nil];
+    for (NSString *file in dirContents)
+    {
+        if ([file hasSuffix:@".json"])
+        {
+            if ([[file lastPathComponent] hasPrefix:@"styles"])
+            {
+                NSString *filePath = [NSString stringWithFormat:@"%@/%@", path, file];
+                NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:[NSData dataWithContentsOfFile:filePath] options:NSJSONReadingAllowFragments error:nil];
+                [styles addEntriesFromDictionary:dictionary];
+            }
+            else if ([[file lastPathComponent] hasPrefix:@"colors"])
+            {
+                NSString *filePath = [NSString stringWithFormat:@"%@/%@", path, file];
+                NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:[NSData dataWithContentsOfFile:filePath] options:NSJSONReadingAllowFragments error:nil];
+                [colors addEntriesFromDictionary:dictionary];
+            }
+            else if ([[file lastPathComponent] hasPrefix:@"fonts"])
+            {
+                NSString *filePath = [NSString stringWithFormat:@"%@/%@", path, file];
+                NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:[NSData dataWithContentsOfFile:filePath] options:NSJSONReadingAllowFragments error:nil];
+                [fonts addEntriesFromDictionary:dictionary];
+            }
+            else if ([[file lastPathComponent] hasPrefix:@"images"])
+            {
+                NSString *filePath = [NSString stringWithFormat:@"%@/%@", path, file];
+                NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:[NSData dataWithContentsOfFile:filePath] options:NSJSONReadingAllowFragments error:nil];
+                [images addEntriesFromDictionary:dictionary];
+            }
+            else if ([[file lastPathComponent] hasPrefix:@"strings"])
+            {
+                NSString *filePath = [NSString stringWithFormat:@"%@/%@", path, file];
+                NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:[NSData dataWithContentsOfFile:filePath] options:NSJSONReadingAllowFragments error:nil];
+                [strings addEntriesFromDictionary:dictionary];
+            }
+        }
+    }
     
     ARTheme *theme = [self sharedTheme];
     
@@ -295,17 +325,16 @@
     UIGraphicsBeginImageContext(rect.size);
     CGContextRef context = UIGraphicsGetCurrentContext();
     
+    CGContextSetStrokeColorWithColor(context, [color CGColor]);
     CGContextSetFillColorWithColor(context, [color CGColor]);
-    // CGContextFillRect(context, rect);
     UIBezierPath *path = [UIBezierPath bezierPathWithRoundedRect:rect cornerRadius:radius];
+    [path setFlatness:0.1];
     [path fill];
-    CGContextAddPath(context, path.CGPath);
-    
     
     UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
     
-    image = [image resizableImageWithCapInsets:UIEdgeInsetsMake(radius, radius, radius, radius)];
+    image = [image stretchableImageWithLeftCapWidth:radius topCapHeight:radius];
     
     return image;
 }
