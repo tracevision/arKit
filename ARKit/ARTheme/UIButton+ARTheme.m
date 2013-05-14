@@ -52,6 +52,11 @@
                 UIColor *color = [theme colorFromStyle:[style objectForKey:key]];
                 [self setTitleColor:color forState:UIControlStateHighlighted];
             }
+            else if ([key isEqualToString:@"font"])
+            {
+                UIFont *font = [theme fontFromStyle:[style objectForKey:key]];
+                self.titleLabel.font = font;
+            }
             else if ([key isEqualToString:@"titleEdgeInsets"])
             {
                 NSDictionary *insets = [style objectForKey:key];
