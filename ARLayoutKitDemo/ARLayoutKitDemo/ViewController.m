@@ -49,13 +49,18 @@
     
     UIButton *button = [[UIButton alloc] initWithWidth:125 height:44];
     [button setTitle:[ARStrings localized:@"button"] forState:UIControlStateNormal];
-    [button applyStyle:@"button_style"];
+    [button applyStyle:@"button_style1"];
     [self.view addSubview:button leftOf:bView offsetTop:0 offsetRight:20];
-    
+   
     UIButton *button2 = [[UIButton alloc] initWithWidth:125 height:34];
     [button2 setTitle:[ARStrings localized:@"button"] forState:UIControlStateNormal];
     [button2 applyStyle:@"button_with_image_insets"];
     [self.view addSubview:button2 below:button offsetTop:10 offsetLeft:0];
+    
+    UIButton *button3 = [[UIButton alloc] initWithWidth:125 height:44];
+    [button3 setTitle:[ARStrings localized:@"button"] forState:UIControlStateNormal];
+    [button3 applyStyle:@"button_style2"];
+    [self.view addSubview:button3 leftOf:bView offsetTop:150 offsetRight:20];
     
     UITextField *textField = [[UITextField alloc] initWithWidth:125 height:44];
     // textField.text = @"Sample text";

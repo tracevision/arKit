@@ -36,11 +36,9 @@
         "backgroundColor": { "color": "#ac0000" }
     },
     
-    "button_style": {
+    "button_style1": {
         "backgroundImage": { "color": "#333", "radius": 8 },
-        "backgroundImageSelected": { "color": "#111", "radius": 8 },
         "titleColor": "#fff",
-        "titleColorHighlighted": "#f00",
         "layer": {
             "borderColor": "#fff",
             "borderWidth": 3,
@@ -49,6 +47,22 @@
             "shadowRadius": 2,
             "shadowOffset": { "width": 2, "height": 2 },
             "cornerRadius": 6
-        }
-    }
+        },
+        "showsTouchWhenHighlighted": false
+    },
+    
+    "button_style2": {
+        "backgroundImage": { "color": "#333", "radius": 8 },
+        "titleColor": "#fff",
+        "layer": {
+            "borderColor": "#fff",
+            "borderWidth": 3,
+            "shadowColor": "#eb743b",
+            "shadowOpacity": 0.8,
+            "shadowRadius": 2,
+            "shadowOffset": { "width": 2, "height": 2 },
+            "cornerRadius": 6
+        },
+        "showsTouchWhenHighlighted": true
+    },
 }
