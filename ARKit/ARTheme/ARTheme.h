@@ -28,6 +28,8 @@
 #pragma mark - Text Attributes
 - (NSDictionary *)textAttributesFromStyle:(NSDictionary *)attrs;
 - (NSTextAlignment)textAlignmentFromStyle:(NSString *)style;
+- (UIControlContentHorizontalAlignment)contentHorizontalAlignmentFromStyle:(NSString *)contentAlignment;
+- (UIControlContentVerticalAlignment)contentVerticalAlignmentFromStyle:(NSString *)contentAlignment;
 - (UIKeyboardType)keyboardTypeFromStyle:(NSString *)style;
 
 #pragma mark - Images

@@ -215,6 +215,53 @@
     return alignment;
 }
 
+- (UIControlContentVerticalAlignment)contentVerticalAlignmentFromStyle:(NSString *)contentAlignment
+{
+    UIControlContentVerticalAlignment alignment = UIControlContentVerticalAlignmentCenter;
+    if ([contentAlignment isEqualToString:@"bottom"])
+    {
+        alignment = UIControlContentVerticalAlignmentBottom;
+    }
+    else if ([contentAlignment isEqualToString:@"center"])
+    {
+        alignment = UIControlContentVerticalAlignmentCenter;
+    }
+    else if ([contentAlignment isEqualToString:@"fill"])
+    {
+        alignment = UIControlContentVerticalAlignmentFill;
+    }
+    else if ([contentAlignment isEqualToString:@"top"])
+    {
+        alignment = UIControlContentVerticalAlignmentTop;
+    }
+    
+    return alignment;
+}
+
+- (UIControlContentHorizontalAlignment)contentHorizontalAlignmentFromStyle:(NSString *)contentAlignment
+{
+    UIControlContentHorizontalAlignment alignment = UIControlContentHorizontalAlignmentCenter;
+    if ([contentAlignment isEqualToString:@"left"])
+    {
+        alignment = UIControlContentHorizontalAlignmentLeft;
+    }
+    else if ([contentAlignment isEqualToString:@"center"])
+    {
+        alignment = UIControlContentHorizontalAlignmentCenter;
+    }
+    else if ([contentAlignment isEqualToString:@"fill"])
+    {
+        alignment = UIControlContentHorizontalAlignmentFill;
+    }
+    else if ([contentAlignment isEqualToString:@"right"])
+    {
+        alignment = UIControlContentHorizontalAlignmentRight;
+    }
+    
+    return alignment;
+}
+
+
 - (UIKeyboardType)keyboardTypeFromStyle:(NSString *)style
 {
     UIKeyboardType keyboardType = UIKeyboardTypeDefault;
