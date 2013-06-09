@@ -22,6 +22,7 @@
 #import "UIButton+ARTheme.h"
 #import "UIImageView+ARTheme.h"
 #import "UITextField+ARTheme.h"
+#import "ARSmallButton.h"
 
 // ARLayout
 #import "ARLayoutEngine.h"

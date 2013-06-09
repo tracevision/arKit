@@ -15,6 +15,7 @@
 + (BOOL)iosVersionEqualOrGreaterThan:(NSString *)version;
 
 + (BOOL)isIphone;
++ (BOOL)isIphone5;
 + (BOOL)isIpad;
 + (BOOL)isRetina;
 

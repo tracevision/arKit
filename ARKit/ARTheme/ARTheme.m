@@ -65,14 +65,26 @@
                 NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:[NSData dataWithContentsOfFile:filePath] options:NSJSONReadingAllowFragments error:nil];
                 [images addEntriesFromDictionary:dictionary];
             }
-            else if ([[file lastPathComponent] hasPrefix:@"strings"])
-            {
-                NSString *filePath = [NSString stringWithFormat:@"%@/%@", path, file];
-                NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:[NSData dataWithContentsOfFile:filePath] options:NSJSONReadingAllowFragments error:nil];
-                [strings addEntriesFromDictionary:dictionary];
-            }
         }
     }
+    
+    // Load Localized String File
+    NSString *localIdentifier = [[NSLocale currentLocale] localeIdentifier];
+    NSString *currentLanguage = [[NSLocale preferredLanguages] objectAtIndex:0];
+    NSMutableArray *stringFiles = [[NSMutableArray alloc] init];
+    [stringFiles addObject:[NSString stringWithFormat:@"%@/strings_%@.json", path, localIdentifier]];
+    [stringFiles addObject:[NSString stringWithFormat:@"%@/strings_%@.json", path, currentLanguage]];
+    [stringFiles addObject:[NSString stringWithFormat:@"%@/strings.json", path]];
+    for (NSString *file in stringFiles)
+    {
+        if ([fm fileExistsAtPath:file])
+        {
+            NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:[NSData dataWithContentsOfFile:file] options:NSJSONReadingAllowFragments error:nil];
+            [strings addEntriesFromDictionary:dictionary];
+            break;
+        }
+    }
+    
     
     ARTheme *theme = [self sharedTheme];
     

@@ -52,6 +52,8 @@
 		2D14713217375E6100845408 /* UIView+ARLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D14713117375E6100845408 /* UIView+ARLayout.m */; };
 		2D14713317375E8700845408 /* UIView+ARLayout.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2D14713017375E6100845408 /* UIView+ARLayout.h */; };
 		2D31F78A173BE95A00059E01 /* UITextField+ARTheme.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8735C5F8173B6C4300527B14 /* UITextField+ARTheme.h */; };
+		2D6E4B55174726B800CFFB30 /* ARSmallButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D6E4B54174726B800CFFB30 /* ARSmallButton.m */; };
+		2D6E4B561747275300CFFB30 /* ARSmallButton.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2D6E4B53174726B800CFFB30 /* ARSmallButton.h */; };
 		8735C5FA173B6C4800527B14 /* UITextField+ARTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = 8735C5F9173B6C4400527B14 /* UITextField+ARTheme.m */; };
 /* End PBXBuildFile section */
 
@@ -72,6 +74,7 @@
 			dstPath = "include/${PRODUCT_NAME}";
 			dstSubfolderSpec = 16;
 			files = (
+				2D6E4B561747275300CFFB30 /* ARSmallButton.h in CopyFiles */,
 				2D31F78A173BE95A00059E01 /* UITextField+ARTheme.h in CopyFiles */,
 				2D02E10C17396557007996A7 /* UIButton+ARTheme.h in CopyFiles */,
 				2D02E10817396351007996A7 /* UIImageView+ARTheme.h in CopyFiles */,
@@ -137,6 +140,8 @@
 		2D14712E1737594500845408 /* ARStrings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARStrings.m; sourceTree = "<group>"; };
 		2D14713017375E6100845408 /* UIView+ARLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ARLayout.h"; sourceTree = "<group>"; };
 		2D14713117375E6100845408 /* UIView+ARLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ARLayout.m"; sourceTree = "<group>"; };
+		2D6E4B53174726B800CFFB30 /* ARSmallButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARSmallButton.h; sourceTree = "<group>"; };
+		2D6E4B54174726B800CFFB30 /* ARSmallButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARSmallButton.m; sourceTree = "<group>"; };
 		8735C5F8173B6C4300527B14 /* UITextField+ARTheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+ARTheme.h"; sourceTree = "<group>"; };
 		8735C5F9173B6C4400527B14 /* UITextField+ARTheme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+ARTheme.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -285,6 +290,8 @@
 				2D02E10A17396473007996A7 /* UIButton+ARTheme.m */,
 				8735C5F8173B6C4300527B14 /* UITextField+ARTheme.h */,
 				8735C5F9173B6C4400527B14 /* UITextField+ARTheme.m */,
+				2D6E4B53174726B800CFFB30 /* ARSmallButton.h */,
+				2D6E4B54174726B800CFFB30 /* ARSmallButton.m */,
 			);
 			path = ARTheme;
 			sourceTree = "<group>";
@@ -427,6 +434,7 @@
 				2D02E10717396280007996A7 /* UIImageView+ARTheme.m in Sources */,
 				2D02E10B17396473007996A7 /* UIButton+ARTheme.m in Sources */,
 				8735C5FA173B6C4800527B14 /* UITextField+ARTheme.m in Sources */,
+				2D6E4B55174726B800CFFB30 /* ARSmallButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

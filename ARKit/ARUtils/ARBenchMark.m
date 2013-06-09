@@ -63,7 +63,7 @@
 
 - (void)report:(NSString *)name report:(NSString *)report
 {
-    NSNumber *start = [self.marks objectForKey:report];
+    NSNumber *start = [self.marks objectForKey:name];
     double total = CFAbsoluteTimeGetCurrent() - [start doubleValue];
     NSLog(@"bench: %@ %@ %f", name, report, total);
 }

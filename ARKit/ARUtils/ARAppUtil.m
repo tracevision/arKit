@@ -43,6 +43,22 @@
     return idiom == UIUserInterfaceIdiomPhone;
 }
 
++ (BOOL)isIphone5
+{
+    CGSize screenSize = [[UIScreen mainScreen] bounds].size;
+    BOOL val = NO;
+    
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
+    {
+        if (screenSize.height > 480.0f)
+        {
+            val = YES;
+        }
+    }
+    
+    return val;
+}
+
 + (BOOL)isIpad
 {
     UIUserInterfaceIdiom idiom = [[UIDevice currentDevice] userInterfaceIdiom];
