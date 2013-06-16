@@ -418,7 +418,7 @@
     else if ([style isKindOfClass:[NSString class]])
     {
         NSString *imageStyle = [self.images objectForKey:style];
-        image = [self imageWithName:imageStyle];
+        image = [self imageFromStyle:imageStyle];
     }
     
     return image;
