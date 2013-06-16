@@ -418,7 +418,14 @@
     else if ([style isKindOfClass:[NSString class]])
     {
         NSString *imageStyle = [self.images objectForKey:style];
-        image = [self imageFromStyle:imageStyle];
+        if ([imageStyle isKindOfClass:[NSString class]])
+        {
+            image = [self imageWithName:imageStyle];
+        }
+        else
+        {
+            image = [self imageFromStyle:imageStyle];
+        }
     }
     
     return image;
