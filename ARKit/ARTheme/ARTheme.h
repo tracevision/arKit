@@ -10,13 +10,14 @@
 
 @interface ARTheme : NSObject
 
+@property (nonatomic, strong) NSString *baseDirectory;
 @property (nonatomic, strong) NSDictionary *styles;
 @property (nonatomic, strong) NSDictionary *colors;
 @property (nonatomic, strong) NSDictionary *fonts;
 @property (nonatomic, strong) NSDictionary *images;
 @property (nonatomic, strong) NSDictionary *strings;
 
-+ (void)setupWithThemePath:(NSString *)path;
++ (void)setupWithThemeFile:(NSString *)filePath;
 + (id)sharedTheme;
 
 #pragma mark - Colors
