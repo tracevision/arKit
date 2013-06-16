@@ -66,6 +66,11 @@
                 NSNumber *right = [insets objectForKey:@"right"];
                 self.titleEdgeInsets = UIEdgeInsetsMake([top doubleValue], [left doubleValue], [bottom doubleValue], [right doubleValue]);
             }
+            else if ([key isEqualToString:@"showsTouchWhenHighlighted"])
+            {
+                NSNumber *boolNumber = [style objectForKey:key];
+                self.showsTouchWhenHighlighted = [boolNumber boolValue];
+            }
         }
     }
     else

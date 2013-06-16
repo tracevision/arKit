@@ -49,6 +49,16 @@
                 UIImage *image = [theme imageFromStyle:[style objectForKey:key]];
                 [self setBackground:image];
             }
+            else if ([key isEqualToString:@"contentVerticalAlignment"])
+            {
+                UIControlContentVerticalAlignment alignment = [theme contentVerticalAlignmentFromStyle:[style objectForKey:key]];
+                self.contentVerticalAlignment = alignment;
+            }
+            else if ([key isEqualToString:@"contentHorizontalAlignment"])
+            {
+                UIControlContentHorizontalAlignment alignment = [theme contentHorizontalAlignmentFromStyle:[style objectForKey:key]];
+                self.contentHorizontalAlignment = alignment;
+            }
         }
     }
     else
