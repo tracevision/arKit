@@ -190,8 +190,13 @@
         }
         else if (imageName != nil)
         {
-            color = [UIColor colorWithPatternImage:[UIImage imageNamed:imageName]];
-            if (color == nil) {
+            UIImage *image = [self imageFromStyle:imageName];
+            if (image == nil) {
+                image = [UIImage imageNamed:imageName];
+            }
+            color = [UIColor colorWithPatternImage:image];
+            if (color == nil)
+            {
                 color = [UIColor colorWithPatternImage:[self.colors objectForKey:imageName]];
             }
         }
