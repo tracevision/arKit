@@ -85,39 +85,6 @@
         }
     }
     
-    
-//    NSArray *dirContents = [fm contentsOfDirectoryAtPath:path error:nil];
-//    for (NSString *file in dirContents)
-//    {
-//        if ([file hasSuffix:@".json"])
-//        {
-//            if ([[file lastPathComponent] hasPrefix:@"styles"])
-//            {
-//                NSString *filePath = [NSString stringWithFormat:@"%@/%@", path, file];
-//                NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:[NSData dataWithContentsOfFile:filePath] options:NSJSONReadingAllowFragments error:nil];
-//                [styles addEntriesFromDictionary:dictionary];
-//            }
-//            else if ([[file lastPathComponent] hasPrefix:@"colors"])
-//            {
-//                NSString *filePath = [NSString stringWithFormat:@"%@/%@", path, file];
-//                NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:[NSData dataWithContentsOfFile:filePath] options:NSJSONReadingAllowFragments error:nil];
-//                [colors addEntriesFromDictionary:dictionary];
-//            }
-//            else if ([[file lastPathComponent] hasPrefix:@"fonts"])
-//            {
-//                NSString *filePath = [NSString stringWithFormat:@"%@/%@", path, file];
-//                NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:[NSData dataWithContentsOfFile:filePath] options:NSJSONReadingAllowFragments error:nil];
-//                [fonts addEntriesFromDictionary:dictionary];
-//            }
-//            else if ([[file lastPathComponent] hasPrefix:@"images"])
-//            {
-//                NSString *filePath = [NSString stringWithFormat:@"%@/%@", path, file];
-//                NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:[NSData dataWithContentsOfFile:filePath] options:NSJSONReadingAllowFragments error:nil];
-//                [images addEntriesFromDictionary:dictionary];
-//            }
-//        }
-//    }
-    
     // Load Localized String File
     NSString *localIdentifier = [[NSLocale currentLocale] localeIdentifier];
     NSString *currentLanguage = [[NSLocale preferredLanguages] objectAtIndex:0];
@@ -144,6 +111,7 @@
     theme.fonts = fonts;
     theme.images = images;
     theme.strings = strings;
+    theme.version = [themeDictionary objectForKey:@"version"];
 }
 
 - (id)init

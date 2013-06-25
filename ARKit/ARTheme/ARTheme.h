@@ -16,6 +16,7 @@
 @property (nonatomic, strong) NSDictionary *fonts;
 @property (nonatomic, strong) NSDictionary *images;
 @property (nonatomic, strong) NSDictionary *strings;
+@property (nonatomic, strong) NSNumber *version;
 
 + (void)setupWithThemeFile:(NSString *)filePath;
 + (id)sharedTheme;
