@@ -17,6 +17,7 @@
 @synthesize fonts;
 @synthesize images;
 @synthesize strings;
+@synthesize settings;
 
 + (id)sharedTheme
 {
@@ -34,6 +35,7 @@
     NSMutableDictionary *fonts = [[NSMutableDictionary alloc] init];
     NSMutableDictionary *images = [[NSMutableDictionary alloc] init];
     NSMutableDictionary *strings = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary *settings = [[NSMutableDictionary alloc] init];
     
     NSFileManager *fm = [NSFileManager defaultManager];
     // NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
@@ -102,6 +104,12 @@
         }
     }
     
+    NSString *settingsFile = [NSString stringWithFormat:@"%@settings.json", baseDir];
+    if ([fm fileExistsAtPath:settingsFile])
+    {
+        settings = [NSJSONSerialization JSONObjectWithData:[NSData dataWithContentsOfFile:settingsFile] options:NSJSONReadingAllowFragments error:nil];
+    }
+    
     
     ARTheme *theme = [self sharedTheme];
     
@@ -111,6 +119,7 @@
     theme.fonts = fonts;
     theme.images = images;
     theme.strings = strings;
+    theme.settings = settings;
     theme.version = [themeDictionary objectForKey:@"version"];
 }
 
@@ -124,6 +133,7 @@
         self.fonts = @{};
         self.images = @{};
         self.strings = @{};
+        self.settings = @{};
     }
     return self;
 }
@@ -478,6 +488,55 @@
 {
     // TODO: implement this function
     return nil;
+}
+
+
+
+#pragma mark - Settings
+
+- (NSNumber *)numberForSetting:(NSString *)key default:(NSNumber *)defaultValue
+{
+    NSNumber *val = [self.settings objectForKey:key];
+    if (val == nil || ![val isKindOfClass:[NSNumber class]])
+    {
+        val = defaultValue;
+    }
+    
+    return val;
+}
+
+- (BOOL)boolForSetting:(NSString *)key
+{
+    NSNumber *val = [self numberForSetting:key default:@NO];
+    return [val boolValue];
+}
+
+- (int)intForKey:(NSString *)key
+{
+    NSNumber *val = [self numberForSetting:key default:@0];
+    return [val integerValue];
+}
+
+- (NSString *)stringForSetting:(NSString *)key default:(NSString *)defaultValue
+{
+    NSString *val = [self.settings objectForKey:key];
+    if (val == nil || ![val isKindOfClass:[NSString class]])
+    {
+        val = defaultValue;
+    }
+    
+    return val;
+}
+
+- (NSDictionary *)dictionaryForSetting:(NSString *)key
+{
+    NSDictionary *val = [self.settings objectForKey:key];
+    if (val == nil || ![val isKindOfClass:[NSDictionary class]])
+    {
+        val = nil;
+    }
+    
+    return val;
 }
 
 @end

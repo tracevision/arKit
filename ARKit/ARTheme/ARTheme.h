@@ -15,6 +15,7 @@
 @property (nonatomic, strong) NSDictionary *colors;
 @property (nonatomic, strong) NSDictionary *fonts;
 @property (nonatomic, strong) NSDictionary *images;
+@property (nonatomic, strong) NSDictionary *settings;
 @property (nonatomic, strong) NSDictionary *strings;
 @property (nonatomic, strong) NSNumber *version;
 
@@ -38,5 +39,13 @@
 - (UIImage *)imageFromStyle:(NSObject *)style;
 + (UIImage *)imageWithColor:(UIColor *)color;
 + (UIImage *)imageWithColor:(UIColor *)color cornerRadius:(CGFloat)radius;
+
+#pragma mark - Settings
+
+- (NSNumber *)numberForSetting:(NSString *)key default:(NSNumber *)defaultValue;
+- (BOOL)boolForSetting:(NSString *)key;
+- (int)intForKey:(NSString *)key;
+- (NSString *)stringForSetting:(NSString *)key default:(NSString *)defaultValue;
+- (NSDictionary *)dictionaryForSetting:(NSString *)key;
 
 @end
