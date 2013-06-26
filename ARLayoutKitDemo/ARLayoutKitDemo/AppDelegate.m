@@ -15,7 +15,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Setup Theme Files
-    [ARTheme setupWithThemePath:[[NSBundle mainBundle] bundlePath]];
+    [ARTheme setupWithThemeFile:[[NSBundle mainBundle] pathForResource:@"theme" ofType:@"json"]];
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.

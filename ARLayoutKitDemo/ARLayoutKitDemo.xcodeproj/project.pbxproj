@@ -27,6 +27,7 @@
 		2D02E1041739609A007996A7 /* avatar.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D02E1031739609A007996A7 /* avatar.png */; };
 		2D02E11217396B02007996A7 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D02E11117396B01007996A7 /* QuartzCore.framework */; };
 		2D5EA72A1741D476009AABB2 /* styles_page1.json in Resources */ = {isa = PBXBuildFile; fileRef = 2D5EA7291741D476009AABB2 /* styles_page1.json */; };
+		2D715925177B5E6D00CD412C /* theme.json in Resources */ = {isa = PBXBuildFile; fileRef = 2D715924177B5E6D00CD412C /* theme.json */; };
 		2D76100B173C65AB00BD881D /* orange_button_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D761009173C65AB00BD881D /* orange_button_bg.png */; };
 		2D76100C173C65AB00BD881D /* orange_button_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D76100A173C65AB00BD881D /* orange_button_bg@2x.png */; };
 /* End PBXBuildFile section */
@@ -57,6 +58,7 @@
 		2D02E1031739609A007996A7 /* avatar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = avatar.png; sourceTree = "<group>"; };
 		2D02E11117396B01007996A7 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		2D5EA7291741D476009AABB2 /* styles_page1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = styles_page1.json; sourceTree = "<group>"; };
+		2D715924177B5E6D00CD412C /* theme.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = theme.json; sourceTree = "<group>"; };
 		2D761009173C65AB00BD881D /* orange_button_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = orange_button_bg.png; sourceTree = "<group>"; };
 		2D76100A173C65AB00BD881D /* orange_button_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "orange_button_bg@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -143,6 +145,7 @@
 				2D02E0F517395931007996A7 /* strings.json */,
 				2D02E0F617395931007996A7 /* styles.json */,
 				2D5EA7291741D476009AABB2 /* styles_page1.json */,
+				2D715924177B5E6D00CD412C /* theme.json */,
 			);
 			name = Theme;
 			sourceTree = "<group>";
@@ -223,6 +226,7 @@
 				2D76100B173C65AB00BD881D /* orange_button_bg.png in Resources */,
 				2D76100C173C65AB00BD881D /* orange_button_bg@2x.png in Resources */,
 				2D5EA72A1741D476009AABB2 /* styles_page1.json in Resources */,
+				2D715925177B5E6D00CD412C /* theme.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

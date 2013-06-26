@@ -349,6 +349,12 @@
     return keyboardType;
 }
 
+
+
+
+#pragma mark - Images
+
+
 - (UIImage *)imageFromStyle:(NSObject *)style
 {
     UIImage *image;
@@ -431,8 +437,6 @@
     
     return image;
 }
-
-#pragma mark - Images
 
 + (UIImage *)imageWithColor:(UIColor *)color
 {

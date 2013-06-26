@@ -1,0 +1,8 @@
+{
+    "name": "Demo Theme",
+    "version": 1,
+    "styles": ["styles.json", "styles_page1.json"],
+    "colors": ["colors.json"],
+    "fonts": ["fonts.json"],
+    "images": ["images.json"]
+}
