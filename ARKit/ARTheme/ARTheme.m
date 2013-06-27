@@ -382,7 +382,20 @@
         }
         else if (i != nil && c == nil)
         {
-            image = [self imageWithName:i];
+            NSString *imageStyle = [self.images objectForKey:i];
+            if (imageStyle != nil && [imageStyle isKindOfClass:[NSString class]])
+            {
+                image = [self imageWithName:imageStyle];
+            }
+            else if (imageStyle != nil && [imageStyle isKindOfClass:[NSDictionary class]])
+            {
+                image = [self imageFromStyle:imageStyle];
+            }
+            
+            if (image == nil)
+            {
+                image = [self imageWithName:i];
+            }
             
             if (image == nil)
             {
