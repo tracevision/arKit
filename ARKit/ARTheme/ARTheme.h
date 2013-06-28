@@ -18,6 +18,7 @@
 @property (nonatomic, strong) NSDictionary *settings;
 @property (nonatomic, strong) NSDictionary *strings;
 @property (nonatomic, strong) NSNumber *version;
+@property (nonatomic, strong) NSString *name;
 
 + (void)setupWithThemeFile:(NSString *)filePath;
 + (id)sharedTheme;

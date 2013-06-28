@@ -112,7 +112,6 @@
     
     
     ARTheme *theme = [self sharedTheme];
-    
     theme.baseDirectory = baseDir;
     theme.styles = styles;
     theme.colors = colors;
@@ -121,6 +120,7 @@
     theme.strings = strings;
     theme.settings = settings;
     theme.version = [themeDictionary objectForKey:@"version"];
+    theme.name = [themeDictionary objectForKey:@"name"];
 }
 
 - (id)init
