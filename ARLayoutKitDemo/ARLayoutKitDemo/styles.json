@@ -33,7 +33,12 @@
     },
     
     "b_view_style": {
-        "backgroundColor": { "color": "#ac0000" }
+        "backgroundColor": { "color": "#ac0000" },
+        "layer": {
+            "borderColor": "#0000ff",
+            "borderWidth": 3.0,
+            "opacity": 0.7
+        }
     },
     
     "button_style1": {

@@ -75,6 +75,11 @@
                         NSNumber *val = [layerStyle objectForKey:layerKey];
                         self.layer.cornerRadius = [val doubleValue];
                     }
+                    else if ([layerKey isEqualToString:@"opacity"])
+                    {
+                        NSNumber *val = [layerStyle objectForKey:layerKey];
+                        self.layer.opacity = [val doubleValue];
+                    }
                 }
             }
         }
