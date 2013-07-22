@@ -11,5 +11,6 @@
 @interface ARStrings : NSObject
 
 + (NSString *)localized:(NSString *)key;
++ (NSArray *)localizedArray:(NSString *)key;
 
 @end
