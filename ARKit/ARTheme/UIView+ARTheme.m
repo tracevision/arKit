@@ -27,6 +27,11 @@
                 UIColor *color = [theme colorFromStyle:[style objectForKey:key]];
                 self.backgroundColor = color;
             }
+            else if ([key isEqualToString:@"tintColor"])
+            {
+//                UIColor *color = [theme colorFromStyle:[style objectForKey:key]];
+//                self.tintColor = color;
+            }
             else if ([key isEqualToString:@"clipsToBounds"])
             {
                 NSNumber *val = [style objectForKey:key];

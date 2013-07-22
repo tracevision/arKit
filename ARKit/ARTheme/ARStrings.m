@@ -13,13 +13,24 @@
 
 + (NSString *)localized:(NSString *)key
 {
-    // TODO: find a good way to localize these
     ARTheme *theme = [ARTheme sharedTheme];
     NSString *val = [theme.strings objectForKey:key];
-    if (val == nil)
+    if (val == nil || ! [val isKindOfClass:[NSString class]])
     {
         val = key;
         NSLog(@"\n\n ***** WARNING: ARString string not found for key \"%@\" *****\n\n", key);
+    }
+    return val;
+}
+
++ (NSArray *)localizedArray:(NSString *)key
+{
+    ARTheme *theme = [ARTheme sharedTheme];
+    NSArray *val = [theme.strings objectForKey:key];
+    if (val == nil || ! [val isKindOfClass:[NSArray class]])
+    {
+        val = @[];
+        NSLog(@"\n\n ***** WARNING: ARString array not found for key \"%@\" *****\n\n", key);
     }
     return val;
 }

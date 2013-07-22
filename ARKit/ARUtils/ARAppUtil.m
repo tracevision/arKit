@@ -29,7 +29,7 @@
 + (BOOL)iosVersionEqualOrGreaterThan:(NSString *)version
 {
     BOOL val = NO;
-    NSComparisonResult result = [[ARAppUtil iosVersion] compare:@"6.0"];
+    NSComparisonResult result = [[ARAppUtil iosVersion] compare:version];
     if (result == NSOrderedDescending || result == NSOrderedSame)
     {
         val = YES;
