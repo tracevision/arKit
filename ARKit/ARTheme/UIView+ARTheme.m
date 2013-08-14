@@ -29,8 +29,8 @@
             }
             else if ([key isEqualToString:@"tintColor"])
             {
-//                UIColor *color = [theme colorFromStyle:[style objectForKey:key]];
-//                self.tintColor = color;
+                UIColor *color = [theme colorFromStyle:[style objectForKey:key]];
+                self.tintColor = color;
             }
             else if ([key isEqualToString:@"clipsToBounds"])
             {
