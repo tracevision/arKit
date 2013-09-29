@@ -32,7 +32,7 @@ These are just a few of most interesting features in ARKit.
   * A theme folder should contain the following files: `styles_*.json`, `colors_*.json`, `fonts_*.json`, `images_*.json`, `strings_*.json`, `settings.json`
   * `styles_*.json` should contain a list of json objects of different styles for UIButtons, UILabels, UISegmentedControls, UIViews, UIImageViews, UITextFields. 
   * Here is an example of how you could use it:
-```
+<code>
 "PageName_LabelName" {
     "textAlignment": "center",
     "textColor": "black",
@@ -43,7 +43,7 @@ These are just a few of most interesting features in ARKit.
       "shadowOffset": { "width": -1, "height": -1 },
     }
 }
-```
+</code>
 "font" key will look into the file `fonts_*.json` to find `labelName_font`; `textColor` will look into the file `colors_*json` to find `black`.
 The styles sheets are available for the following UI Elements:
 	* Strings
