@@ -11,4 +11,33 @@ These are just a few of most interesting features in ARKit.
 
 ---
 
+###ARUtils
+
+* Benchmarking tools - ARBenchmark
+  * Reports effectively what function is taking the most time.
+  * Use `start:(NSStrings *)name` at the beginning of a function and `stop:(NSString *)name` at the end of a function to see the efficiency of that particular function.
+* App Utility tools - ARAppUtils
+  * It tells the user system information such as: `isSimulator`, `iOSVersion`, `isRetina`, `isIphone5`, `isIpad`, ... ,etc.
+  * `iosVersionEqualOrGreaterThan:(NSString *)version` is useful when dealing with compatibility with ios6 and ios7. 
+
+###ARLayout
+  * This is really useful!!
+  * If you have multiple views and their positions are dependent on each other, this tool can come really handy. You can position the views relative to other views by doing:`[myView addSubView:mySubView above:bottomView offsetBottom:10 offSetLeft:0]`. In this case `mySubView` is a subview of `myView`, and it is left aligned with bottomView, and the top of myView is 10 px above the top of bottomView.
+  * We added width and height as properties to the UIView. Therefore, you can directly alloc and init like this: `UIView *view = [[UIView alloc] initWithWidth:100 height:100]`, and set width and height just like any other properties.
+
+###ARTheme
+* Theme
+  * A theme is a kind of look in the app. We completely separated function logic with design. Think of it as the CSS for website design, the only difference is that it offers more than that.
+  * Set up with a theme folder by doing: `[ARTheme setupWithThemeFile:(NSString *)filePath]`
+  * A theme folder should contain the following files: `styles_*.json`, `colors_*.json`, `fonts_*.json`, `images_*.json`, `strings_*.json`, `settings.json`
+* Strings
+* UILabel
+* UISegmentedControl
+* UIView
+* UIImageView
+* UIButton
+* UITextField
+* ARSmallButton
+
+
 
