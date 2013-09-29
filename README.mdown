@@ -34,26 +34,25 @@ These are just a few of most interesting features in ARKit.
   * Here is an example of how you could use it:
 <pre><code>
 "PageName_LabelName" {
-    "textAlignment": "center",
-    "textColor": "black",
-    "font": "labelName_font",
-    "layer": {
-      "shadowColor": "black",
-      "shadowOpacity": "0.8",
-      "shadowOffset": { "width": -1, "height": -1 },
-    }
+		"textAlignment": "center",
+		"textColor": "black",
+		"font": "labelName_font",
+		"layer": {
+			"shadowColor": "black",
+			"shadowOpacity": "0.8"
+			"shadowOffset": { "width": -1, "height": -1 },
+		}
 }
 </code></pre>
 "font" key will look into the file `fonts_*.json` to find `labelName_font`; `textColor` will look into the file `colors_*json` to find `black`.
 The styles sheets are available for the following UI Elements:
-	* Strings
-	* UILabel
-	* UISegmentedControl
-	* UIView
-	* UIImageView
-	* UIButton
-	* UITextField
-	* ARSmallButton
-
+	 * UILabel
+	 * UISegmentedControl
+	 * UIView
+	 * UIImageView
+	 * UIButton
+	 * UITextField
+  * `strings_*.json*` localizes your app. A simple example: if you have `"Name": "Enrique"` in strings.json, you can do `[ARStrings localized:"Name"]` to print out the world "Name" in spanish.
+  * `settings.json`. For example, this could be a list of bools to turn on/off some features. `"Feature_name": 1`, you can do `[ARTheme boolForSettings:@"Feature_name"]` to check if the setting is turned on.
 
 
