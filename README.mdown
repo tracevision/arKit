@@ -30,7 +30,6 @@ These are just a few of most interesting features in ARKit.
   * You can completely pulled the design out of your app's functional logic by using this. It is really similar to CSS (style sheets) for website design, the only difference is that ARTheme offers more than that, and it is more awesome.
   * Set up with a theme folder by doing: `[ARTheme setupWithThemeFile:(NSString *)filePath]`
   * A theme folder should contain the following files: `styles_*.json`, `colors_*.json`, `fonts_*.json`, `images_*.json`, `strings_*.json`, `settings.json`
-  * `styles_*.json` should contain a list of json objects of different styles for UIButtons, UILabels, UISegmentedControls, UIViews, UIImageViews, UITextFields. 
   * Here is an example of how you could use it:
 <pre><code>
 "PageName_LabelName" {
@@ -45,14 +44,14 @@ These are just a few of most interesting features in ARKit.
 }
 </code></pre>
 "font" key will look into the file `fonts_*.json` to find `labelName_font`; `textColor` will look into the file `colors_*json` to find `black`.
-The styles sheets are available for the following UI Elements:
+The styles sheets `styles_*.json` are available for the following UI Elements:
 	 * UILabel
 	 * UISegmentedControl
 	 * UIView
 	 * UIImageView
 	 * UIButton
 	 * UITextField
-  * `strings_*.json*` localizes your app. A simple example: if you have `"Name": "Enrique"` in strings.json, you can do `[ARStrings localized:"Name"]` to print out the world "Name" in spanish.
-  * `settings.json`. For example, this could be a list of bools to turn on/off some features. `"Feature_name": 1`, you can do `[ARTheme boolForSettings:@"Feature_name"]` to check if the setting is turned on.
+  * `strings_*.json` localizes your app. A simple example: If you want to localize your app for Spanish, you can write `"Name": "Enrique"` in strings.json, and in your app, write `[ARStrings localized:"Name"]` to print out the word "Enrique".
+  * `settings.json` should contain a list of settings in json format for your app. For example, this could be a list of bools to turn on/off some features. `"Feature_name": 1`, you can do `[ARTheme boolForSettings:@"Feature_name"]` to check if the setting is turned on.
 
 
