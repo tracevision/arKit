@@ -42,11 +42,15 @@
 + (UIImage *)imageWithColor:(UIColor *)color cornerRadius:(CGFloat)radius;
 
 #pragma mark - Settings
-
 - (NSNumber *)numberForSetting:(NSString *)key default:(NSNumber *)defaultValue;
 - (BOOL)boolForSetting:(NSString *)key;
 - (int)intForKey:(NSString *)key;
 - (NSString *)stringForSetting:(NSString *)key default:(NSString *)defaultValue;
 - (NSDictionary *)dictionaryForSetting:(NSString *)key;
+
+#pragma mark - Properties & Methods
+-(NSMutableArray *)propertyArrayForClass:(Class)class;
+-(NSMutableArray *)methodArrayForClass:(Class)class;
+-(id)valueForProperty:(NSObject *)key forClass:(Class)class withStyle:(NSDictionary*)style;
 
 @end

@@ -552,4 +552,89 @@
     return val;
 }
 
+
+
+#pragma mark - Properties & Methods
+
+-(id)valueForProperty:(NSObject *)key forClass:(Class)class withStyle:(NSDictionary *)style
+{
+    id value;
+    
+    if ([[style objectForKey:key] isKindOfClass:[NSString class]])
+    {
+        objc_property_t property = class_getProperty(class, [(NSString *)key UTF8String]);
+        const char * propertyAttributes = property_getAttributes(property);
+        NSString *propertyString = [NSString stringWithUTF8String:propertyAttributes];
+        NSArray * attributesArray = [propertyString componentsSeparatedByString:@","];
+        NSString * typeAttribute = [attributesArray objectAtIndex:0];
+        NSString * typeClassName = [typeAttribute substringWithRange:NSMakeRange(3, [typeAttribute length]-4)];
+    
+        if ([typeClassName isEqualToString:@"c"]) {
+            //it's a bool
+            value = [style objectForKey:key];
+        }
+        else if ([typeClassName isEqualToString:@"i"]) {
+            //it's an int
+            NSValue *number = [style objectForKey:key];
+            value = number;
+        }
+        else if ([typeClassName isEqualToString:@"UIColor"]) {
+            //it's a color
+            UIColor *color = [self colorFromStyle:[style objectForKey:key]];
+            value = color;
+        }
+        else if ([typeClassName isEqualToString:@"UIImage"]) {
+            //its an image
+            UIImage *image = [self imageFromStyle:[style objectForKey:key]];
+            value = image;
+        }
+        else if ([typeClassName isEqualToString:@"UIFont"]) {
+            //its a font
+            UIFont *font = [self fontFromStyle:[style objectForKey:key]];
+            value = font;
+        }
+        else if ([typeClassName isEqualToString:@"NSString"]) {
+            //its a font
+            NSString *string = [style objectForKey:key];
+            value = string;
+        }
+        // handle additional possible types here
+        else {
+            NSLog(@"Type not recognized for: %@", key);
+            value = nil;
+        }
+    }
+    
+    return value;
+}
+
+-(NSMutableArray *)propertyArrayForClass:(Class)class
+{
+    unsigned count;
+    objc_property_t* properties = class_copyPropertyList(class, &count);
+    NSMutableArray* propertyArray = [NSMutableArray arrayWithCapacity:count];
+    for (int i = 0; i < count ; i++)
+    {   const char* propertyName = property_getName(properties[i]);
+        [propertyArray addObject:[NSString  stringWithCString:propertyName encoding:NSUTF8StringEncoding]];
+    }
+    free(properties);
+    
+    return propertyArray;
+}
+
+-(NSMutableArray *)methodArrayForClass:(Class)class
+{
+    unsigned count;
+    Method *methods = class_copyMethodList(class, &count);
+    NSMutableArray* methodArray = [NSMutableArray arrayWithCapacity:count];
+    for (int i = 0; i < count; i++)
+    {   if ([NSStringFromSelector(method_getName(methods[i])) rangeOfString:@"_"].location == NSNotFound) {
+            [methodArray addObject:NSStringFromSelector(method_getName(methods[i]))];
+        }
+    }
+    free(methods);
+    
+    return methodArray;
+}
+
 @end

@@ -21,8 +21,22 @@
     if (style != nil)
     {
         NSArray *keys = [style allKeys];
+        NSArray *properties = [theme propertyArrayForClass:[self class]];
         for (NSString *key in keys)
         {
+            //dynamically set the property
+            for (NSString *property in properties)
+            {
+                if ([property isEqualToString:key])
+                {
+                    id value = [theme valueForProperty:property forClass:[self class] withStyle:style];
+                    if (value != nil) {
+                        [self setValue:value forKey:key];
+                    }
+                }
+            }
+            
+            //explicitly set the property
             if ([key isEqualToString:@"textColor"])
             {
                 UIColor *color = [theme colorFromStyle:[style objectForKey:key]];
