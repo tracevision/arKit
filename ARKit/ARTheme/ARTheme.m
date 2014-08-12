@@ -91,16 +91,15 @@
     NSString *localIdentifier = [[NSLocale currentLocale] localeIdentifier];
     NSString *currentLanguage = [[NSLocale preferredLanguages] objectAtIndex:0];
     NSMutableArray *stringFiles = [[NSMutableArray alloc] init];
-    [stringFiles addObject:[NSString stringWithFormat:@"%@strings_%@.json", baseDir, localIdentifier]];
-    [stringFiles addObject:[NSString stringWithFormat:@"%@strings_%@.json", baseDir, currentLanguage]];
     [stringFiles addObject:[NSString stringWithFormat:@"%@strings.json", baseDir]];
+    [stringFiles addObject:[NSString stringWithFormat:@"%@strings_%@.json", baseDir, currentLanguage]];
+    [stringFiles addObject:[NSString stringWithFormat:@"%@strings_%@.json", baseDir, localIdentifier]];
     for (NSString *file in stringFiles)
     {
         if ([fm fileExistsAtPath:file])
         {
             NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:[NSData dataWithContentsOfFile:file] options:NSJSONReadingAllowFragments error:nil];
             [strings addEntriesFromDictionary:dictionary];
-            break;
         }
     }
     
